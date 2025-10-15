@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import QuestionCard from './QuestionCard';
-
-
-type Question = {
-  question: string;
-  options: string[];
-  answer: string;
-};
+import QuestionCard, { Question } from './QuestionCard';
 
 type QuizPlayerProps = {
   topic: string;
@@ -18,21 +11,42 @@ export default function QuizPlayer({ topic, onBack }: QuizPlayerProps) {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
 
+  // Track all selected answers by index
+  const [selectedAnswers, setSelectedAnswers] = useState<(string | null)[]>([]);
+
   useEffect(() => {
-    // load local json
-    fetch('/src/data/questions.json')
+    fetch('/data/questions.json')
       .then((r) => r.json())
       .then((data) => {
-        setQuestions(data[topic] || []);
+        const qs = data[topic] || [];
+        setQuestions(qs);
         setIndex(0);
         setScore(0);
+        setSelectedAnswers(new Array(qs.length).fill(null));
       })
       .catch((err) => console.error('Failed to load questions:', err));
   }, [topic]);
 
-  function handleAnswer(correct: boolean) {
+  const answered = selectedAnswers[index] !== null;
+
+  function handleAnswer(correct: boolean, selectedOption: string) {
+    if (answered) return;
+
+    setSelectedAnswers((prev) => {
+      const copy = [...prev];
+      copy[index] = selectedOption;
+      return copy;
+    });
+
     if (correct) setScore((s) => s + 1);
-    setIndex((i) => i + 1);
+  }
+
+  function handleNext() {
+    setIndex((i) => Math.min(i + 1, questions.length - 1));
+  }
+
+  function handlePrevious() {
+    setIndex((i) => Math.max(i - 1, 0));
   }
 
   if (!questions.length)
@@ -47,28 +61,51 @@ export default function QuizPlayer({ topic, onBack }: QuizPlayerProps) {
 
   if (index >= questions.length)
     return (
-      <div>
+      <div className="text-center">
         <button onClick={onBack} className="mb-4">
           ← Back
         </button>
-        <h2 className="text-2xl">Finished!</h2>
+        <h2 className="text-2xl font-bold">Finished!</h2>
         <p>
           Your score: {score} / {questions.length}
         </p>
-        <div className="mt-4">{/* TODO: show Lottie celebration */}</div>
       </div>
     );
 
   return (
-    <div>
-      <button onClick={onBack} className="mb-4">
+    <div className="max-w-2xl mx-auto p-6 bg-green-50 rounded-xl shadow">
+      <button onClick={onBack} className="mb-4 text-green-700 hover:underline">
         ← Back
       </button>
-      <div className="max-w-2xl mx-auto">
-        <QuestionCard question={questions[index]} onAnswer={handleAnswer} />
-        <div className="mt-4">
-          Progress: {index + 1} / {questions.length}
-        </div>
+
+      <QuestionCard
+        question={questions[index]}
+        onAnswer={handleAnswer}
+        answered={answered}
+        selectedOption={selectedAnswers[index] || null} // show previous selection
+      />
+
+      <div className="flex justify-between mt-4">
+        <button
+          onClick={handlePrevious}
+          className="px-4 py-2 bg-gray-300 text-gray-800 rounded shadow hover:bg-gray-400 transition"
+          disabled={index === 0}
+        >
+          ← Previous
+        </button>
+
+        {answered && index < questions.length - 1 && (
+          <button
+            onClick={handleNext}
+            className="px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition"
+          >
+            Next →
+          </button>
+        )}
+      </div>
+
+      <div className="mt-4 text-green-800">
+        Progress: {index + 1} / {questions.length}
       </div>
     </div>
   );
