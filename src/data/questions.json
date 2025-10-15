@@ -1,0 +1,250 @@
+{
+  "waste_management": [
+    {
+      "question": "Which bin should you put paper in?",
+      "options": ["Green", "Blue", "Red", "Yellow"],
+      "answer": "Blue",
+      "explanation": "Blue bins are for recyclables like paper and cardboard."
+    },
+    {
+      "question": "Which of these is compostable?",
+      "options": ["Plastic bottle", "Banana peel", "Glass jar", "Styrofoam"],
+      "answer": "Banana peel",
+      "explanation": "Organic food waste can be composted."
+    },
+    {
+      "question": "Where should glass bottles go?",
+      "options": ["Green bin", "Blue bin", "Red bin", "Yellow bin"],
+      "answer": "Blue bin",
+      "explanation": "Glass bottles are recyclable and go into blue bins."
+    },
+    {
+      "question": "Which item should NOT be recycled?",
+      "options": ["Aluminum cans", "Plastic bags", "Newspapers", "Cardboard"],
+      "answer": "Plastic bags",
+      "explanation": "Plastic bags can jam recycling machines and should be reused or disposed properly."
+    },
+    {
+      "question": "What is e-waste?",
+      "options": ["Electronic waste", "Organic waste", "Plastic waste", "Paper waste"],
+      "answer": "Electronic waste",
+      "explanation": "E-waste refers to discarded electronic devices."
+    },
+    {
+      "question": "How can you reduce plastic waste?",
+      "options": ["Use single-use plastics", "Use reusable bags", "Burn plastics", "Throw plastics in water"],
+      "answer": "Use reusable bags",
+      "explanation": "Using reusable items reduces plastic waste significantly."
+    },
+    {
+      "question": "What is the correct way to dispose of batteries?",
+      "options": ["Throw in trash", "Recycle at special centers", "Burn them", "Bury them"],
+      "answer": "Recycle at special centers",
+      "explanation": "Batteries contain hazardous chemicals and should be recycled properly."
+    },
+    {
+      "question": "Which type of waste should be composted?",
+      "options": ["Metal scraps", "Food scraps", "Plastic bottles", "Glass jars"],
+      "answer": "Food scraps",
+      "explanation": "Organic food waste can be broken down into compost."
+    },
+    {
+      "question": "What does the term 'reduce' mean in waste management?",
+      "options": ["Use less and avoid unnecessary waste", "Recycle everything", "Burn trash", "Dump waste in water"],
+      "answer": "Use less and avoid unnecessary waste",
+      "explanation": "Reducing means minimizing waste at the source."
+    },
+    {
+      "question": "Which is a hazardous waste?",
+      "options": ["Old paint cans", "Banana peels", "Cardboard", "Glass bottles"],
+      "answer": "Old paint cans",
+      "explanation": "Hazardous waste can be toxic and requires special disposal."
+    }
+  ],
+  "energy_conservation": [
+    {
+      "question": "What is an easy way to save electricity at home?",
+      "options": ["Leave lights on", "Turn off unused lights", "Run devices on standby", "Use older bulbs"],
+      "answer": "Turn off unused lights",
+      "explanation": "Turning off lights when not needed saves energy."
+    },
+    {
+      "question": "Which type of light bulb is most energy-efficient?",
+      "options": ["Incandescent", "LED", "Halogen", "Candle bulb"],
+      "answer": "LED",
+      "explanation": "LED bulbs use less energy and last longer than traditional bulbs."
+    },
+    {
+      "question": "What is standby power?",
+      "options": ["Power used by devices when turned off", "Power from solar panels", "Power saved by switching off lights", "Power from batteries"],
+      "answer": "Power used by devices when turned off",
+      "explanation": "Many devices consume electricity even when switched off but plugged in."
+    },
+    {
+      "question": "Which appliance uses the most electricity at home?",
+      "options": ["Refrigerator", "TV", "Laptop", "Toaster"],
+      "answer": "Refrigerator",
+      "explanation": "Refrigerators run 24/7 and consume significant electricity."
+    },
+    {
+      "question": "How can you save energy while cooking?",
+      "options": ["Use smaller pots and lids", "Keep stove on high", "Boil excessive water", "Preheat oven for too long"],
+      "answer": "Use smaller pots and lids",
+      "explanation": "Smaller pots with lids conserve heat and energy."
+    },
+    {
+      "question": "What is renewable energy?",
+      "options": ["Energy that runs out quickly", "Energy from natural sources that replenish", "Energy from coal", "Energy from oil"],
+      "answer": "Energy from natural sources that replenish",
+      "explanation": "Solar, wind, and hydro energy are renewable."
+    },
+    {
+      "question": "Which is a renewable energy source?",
+      "options": ["Coal", "Wind", "Natural Gas", "Oil"],
+      "answer": "Wind",
+      "explanation": "Wind energy can be used continuously without depleting resources."
+    },
+    {
+      "question": "What should you do when leaving a room?",
+      "options": ["Leave lights on", "Turn off lights and devices", "Keep AC on", "Run appliances"],
+      "answer": "Turn off lights and devices",
+      "explanation": "Turning off unused devices reduces energy waste."
+    },
+    {
+      "question": "How can insulation save energy?",
+      "options": ["Keeps heat/cool air inside", "Blocks sunlight", "Consumes energy", "Increases appliance use"],
+      "answer": "Keeps heat/cool air inside",
+      "explanation": "Good insulation reduces heating and cooling energy needs."
+    },
+    {
+      "question": "Which practice reduces water heating energy?",
+      "options": ["Short showers", "Long baths", "Keeping taps running", "Using cold water only for dishes"],
+      "answer": "Short showers",
+      "explanation": "Reducing hot water use saves electricity and energy."
+    }
+  ],
+  "tree_planting": [
+    {
+      "question": "Why are trees important for biodiversity?",
+      "options": ["They reduce habitats", "They provide oxygen and habitats", "They increase pollution", "They remove soil"],
+      "answer": "They provide oxygen and habitats",
+      "explanation": "Trees produce oxygen and create habitats for many species."
+    },
+    {
+      "question": "Which tree helps prevent soil erosion?",
+      "options": ["Palm tree", "Mangrove", "Cactus", "Pine tree"],
+      "answer": "Mangrove",
+      "explanation": "Mangrove roots stabilize soil and protect against erosion."
+    },
+    {
+      "question": "How do trees combat climate change?",
+      "options": ["Absorb CO2", "Produce CO2", "Increase heat", "Decrease rainfall"],
+      "answer": "Absorb CO2",
+      "explanation": "Trees absorb carbon dioxide and reduce greenhouse gases."
+    },
+    {
+      "question": "What is afforestation?",
+      "options": ["Planting new forests", "Cutting down trees", "Using wood as fuel", "Removing soil"],
+      "answer": "Planting new forests",
+      "explanation": "Afforestation is creating forests in areas without trees."
+    },
+    {
+      "question": "Which tree provides shade and reduces urban heat?",
+      "options": ["Oak", "Cactus", "Palm", "Pine"],
+      "answer": "Oak",
+      "explanation": "Broad-leaved trees like oak provide shade and cool surroundings."
+    },
+    {
+      "question": "Why plant trees along rivers?",
+      "options": ["To block water", "To prevent erosion and provide habitats", "To increase floods", "To remove fish"],
+      "answer": "To prevent erosion and provide habitats",
+      "explanation": "Tree roots stabilize riverbanks and support wildlife."
+    },
+    {
+      "question": "How do trees improve air quality?",
+      "options": ["Release oxygen and filter pollutants", "Release CO2", "Trap water", "Reduce soil nutrients"],
+      "answer": "Release oxygen and filter pollutants",
+      "explanation": "Trees clean the air by absorbing pollutants and producing oxygen."
+    },
+    {
+      "question": "Which tree type is best for urban areas?",
+      "options": ["Fast-growing shade trees", "Cactus", "Mangrove", "Bamboo"],
+      "answer": "Fast-growing shade trees",
+      "explanation": "They provide shade quickly and improve city environments."
+    },
+    {
+      "question": "How can community tree planting help?",
+      "options": ["Increase pollution", "Enhance local environment and biodiversity", "Destroy habitats", "Increase soil erosion"],
+      "answer": "Enhance local environment and biodiversity",
+      "explanation": "Community planting creates green spaces and supports ecosystems."
+    },
+    {
+      "question": "Why are native trees important?",
+      "options": ["They support local wildlife", "They attract pests", "They reduce soil nutrients", "They are decorative only"],
+      "answer": "They support local wildlife",
+      "explanation": "Native species are adapted to local ecosystems and benefit wildlife."
+    }
+  ],
+  "water_conservation": [
+    {
+      "question": "What is a way to save water at home?",
+      "options": ["Let taps run", "Fix leaks", "Water the garden at noon", "Use a hose for small jobs"],
+      "answer": "Fix leaks",
+      "explanation": "Fixing leaks prevents continuous water loss."
+    },
+    {
+      "question": "When is the best time to water plants?",
+      "options": ["Noon", "Morning or evening", "Afternoon", "Night"],
+      "answer": "Morning or evening",
+      "explanation": "Watering early or late reduces evaporation."
+    },
+    {
+      "question": "Which practice wastes the most water?",
+      "options": ["Taking short showers", "Letting taps run while brushing", "Using a bucket for washing", "Collecting rainwater"],
+      "answer": "Letting taps run while brushing",
+      "explanation": "Leaving taps running unnecessarily wastes water."
+    },
+    {
+      "question": "How can rainwater be used?",
+      "options": ["Draining it", "Collecting for irrigation", "Pouring on streets", "Evaporating it"],
+      "answer": "Collecting for irrigation",
+      "explanation": "Rainwater harvesting conserves water for gardens or cleaning."
+    },
+    {
+      "question": "What is greywater?",
+      "options": ["Drinking water", "Reused household water", "Rainwater", "Sewage water"],
+      "answer": "Reused household water",
+      "explanation": "Greywater is gently used water that can be recycled for non-drinking purposes."
+    },
+    {
+      "question": "Which device saves water in toilets?",
+      "options": ["Low-flow toilet", "High-flow shower", "Hose", "Faucet aerator"],
+      "answer": "Low-flow toilet",
+      "explanation": "Low-flow toilets use less water per flush."
+    },
+    {
+      "question": "How can you reduce water use while washing dishes?",
+      "options": ["Leave tap running", "Use a basin", "Rinse continuously", "Spray with hose"],
+      "answer": "Use a basin",
+      "explanation": "Filling a basin instead of running water reduces water use."
+    },
+    {
+      "question": "Why avoid watering lawns in the afternoon?",
+      "options": ["Water evaporates quickly", "Grass grows too fast", "Soil absorbs too much", "Water becomes dirty"],
+      "answer": "Water evaporates quickly",
+      "explanation": "Watering when sun is strongest leads to wastage through evaporation."
+    },
+    {
+      "question": "Which activity saves the most water?",
+      "options": ["Taking showers instead of baths", "Using garden hose", "Washing car with hose", "Filling swimming pool"],
+      "answer": "Taking showers instead of baths",
+      "explanation": "Short showers use less water than full baths."
+    },
+    {
+      "question": "How can fixing dripping taps help?",
+      "options": ["Increase water use", "Save water and reduce bills", "Damage pipes", "Clean water"],
+      "answer": "Save water and reduce bills",
+      "explanation": "Even small leaks waste significant water over time."
+    }
+  ]
+}
