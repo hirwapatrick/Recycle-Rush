@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+import Lottie from 'lottie-react';
 import Confetti from 'react-confetti';
+import correctAnim from '../anime/correct.json';
+import wrongAnim from '../anime/incorrect.json';
 
 export type Question = {
   question: string;
@@ -12,82 +15,92 @@ export type Question = {
 type QuestionCardProps = {
   question: Question;
   onAnswer: (correct: boolean, selectedOption: string) => void;
-  answered: boolean; // controlled from parent
-  selectedOption?: string | null; // previously selected
+  answered: boolean;
+  selectedOption?: string | null; // <- add this line
 };
 
-export default function QuestionCard({
-  question,
-  onAnswer,
-  answered,
-  selectedOption,
-}: QuestionCardProps) {
-  const [selected, setSelected] = useState<string | null>(null);
+type DragItem = {
+  text: string;
+};
+
+export default function QuestionCard({ question, onAnswer, answered }: QuestionCardProps) {
+  const [showAnim, setShowAnim] = useState<'correct' | 'wrong' | null>(null);
   const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
-    // Reset selection when question changes
-    setSelected(selectedOption ?? null);
+    setShowAnim(null);
     setShowConfetti(false);
-  }, [question, selectedOption]);
+  }, [question]);
 
-  const handleClick = (option: string) => {
-    if (answered || selected) return;
-
-    setSelected(option);
-    const correct = option === question.answer;
-    onAnswer(correct, option);
-
+  const handleDrop = (item: DragItem) => {
+    if (answered) return;
+    const correct = item.text === question.answer;
+    onAnswer(correct, item.text);
     if (correct) {
+      setShowAnim('correct');
       setShowConfetti(true);
+      setTimeout(() => setShowAnim(null), 1500);
       setTimeout(() => setShowConfetti(false), 2000);
+    } else {
+      setShowAnim('wrong');
+      setTimeout(() => setShowAnim(null), 1500);
     }
   };
 
-  const currentSelection = selected;
-  const isCorrect = currentSelection === question.answer;
+  const [{ isOver }, drop] = useDrop({
+    accept: 'option',
+    drop: (item: DragItem) => handleDrop(item),
+    collect: (monitor) => ({ isOver: !!monitor.isOver() }),
+  });
 
   return (
-    <div className="p-6 rounded-xl border-2 border-green-300 bg-green-50 shadow-lg max-w-xl mx-auto">
+    <div className="relative p-6 rounded-xl border-2 border-green-300 bg-green-50 shadow-lg max-w-xl mx-auto overflow-hidden">
       {showConfetti && <Confetti numberOfPieces={100} recycle={false} />}
-      <h3 className="text-lg font-bold mb-4 text-green-800">{question.question}</h3>
 
-      <div className="grid gap-3">
-        {question.options.map((opt) => {
-          const isSelected = currentSelection === opt;
-          let bgColor = 'bg-green-100 hover:bg-green-200';
-
-          if (answered || currentSelection) {
-            if (isSelected && opt === question.answer) bgColor = 'bg-green-400 text-white';
-            else if (isSelected && opt !== question.answer) bgColor = 'bg-red-400 text-white';
-            else if (opt === question.answer) bgColor = 'bg-green-300 text-white';
-            else bgColor = 'bg-green-100';
-          }
-
-          return (
-            <button
-              key={opt}
-              onClick={() => handleClick(opt)}
-              className={`p-3 rounded-lg border border-green-300 font-semibold flex items-center gap-2 transition transform hover:scale-105 ${bgColor}`}
-              disabled={!!selectedOption} // disable for previous questions
-            >
-              {(answered || currentSelection) && isSelected && opt === question.answer && (
-                <FaCheckCircle className="text-white" />
-              )}
-              {(answered || currentSelection) && isSelected && opt !== question.answer && (
-                <FaTimesCircle className="text-white" />
-              )}
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-
-      {(answered || currentSelection) && !isCorrect && question.explanation && (
-        <div className="mt-4 p-3 bg-green-100 border-l-4 border-green-400 rounded">
-          <p className="text-sm text-green-800">Hint: {question.explanation}</p>
+      {showAnim && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-50">
+          <div className="w-40 h-40">
+            <Lottie animationData={showAnim === 'correct' ? correctAnim : wrongAnim} loop={false} />
+          </div>
         </div>
       )}
+
+      <h3 className="text-lg font-bold mb-6 text-green-800">{question.question}</h3>
+
+      <div
+        ref={drop}
+        className={`p-6 border-4 border-dashed rounded-lg mb-6 flex justify-center items-center text-xl ${
+          isOver ? 'border-green-600 bg-green-100' : 'border-gray-300 bg-white'
+        }`}
+      >
+        {answered ? question.answer : 'Drop your answer here'}
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-4">
+        {question.options.map((opt) => (
+          <DraggableOption key={opt} text={opt} answered={answered} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function DraggableOption({ text, answered }: { text: string; answered: boolean }) {
+  const [{ isDragging }, drag] = useDrag({
+    type: 'option',
+    item: { text },
+    canDrag: !answered,
+    collect: (monitor) => ({ isDragging: !!monitor.isDragging() }),
+  });
+
+  return (
+    <div
+      ref={drag}
+      className={`p-4 bg-green-200 rounded-lg cursor-move hover:scale-105 transform transition ${
+        isDragging ? 'opacity-50' : ''
+      } text-lg font-semibold`}
+    >
+      {text}
     </div>
   );
 }
