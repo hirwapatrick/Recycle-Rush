@@ -1,33 +1,31 @@
-import React from 'react';
 import { FaRecycle, FaBolt, FaTree, FaWater } from 'react-icons/fa';
-
+import Lotties from './Lotties';
+import bird from "../anime/running pigeon.json"
 type Topic = {
   id: string;
   name: string;
   icon: JSX.Element;
 };
-
 type HomeProps = {
   onSelectTopic: (topicId: string) => void;
 };
-
 const topics: Topic[] = [
   { id: 'waste_management', name: 'Waste Management', icon: <FaRecycle /> },
   { id: 'energy_conservation', name: 'Energy Conservation', icon: <FaBolt /> },
   { id: 'tree_planting', name: 'Tree Planting & Biodiversity', icon: <FaTree /> },
   { id: 'water_conservation', name: 'Water Conservation', icon: <FaWater /> },
 ];
-
 export default function Home({ onSelectTopic }: HomeProps) {
   return (
+    <div className="flex">
+      <Lotties animationData={bird}/>
     <div className="max-w-4xl mx-auto text-center">
-      <h1 className="text-4xl font-bold mb-6 text-green-800 animate-pulse">
-        🌿⚠️ Recycle Rush — The Green Skills Challenge
+      <h1 className="text-[20px] font-semibold mb-6 text-green-800 animate-pulse">
+        Leave world clean , Recycle Rush
       </h1>
       <p className="mb-6 text-green-700">
         Choose a topic to start learning through interactive mini-games and quizzes.
       </p>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {topics.map((t) => (
           <button
@@ -42,5 +40,5 @@ export default function Home({ onSelectTopic }: HomeProps) {
         ))}
       </div>
     </div>
-  );
+ </div> );
 }

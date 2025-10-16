@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import QuestionCard, { Question } from './QuestionCard';
 import { motion, AnimatePresence } from 'framer-motion';
+import Lottie from 'lottie-react';
+import trophyAnim from '../anime/trophy.json';
+import Confetti from 'react-confetti';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
-type QuizPlayerProps = {
-  topic: string;
-  onBack: () => void;
-};
+type QuizPlayerProps = { topic: string; onBack: () => void };
 
 export default function QuizPlayer({ topic, onBack }: QuizPlayerProps) {
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [index, setIndex] = useState<number>(0);
-  const [score, setScore] = useState<number>(0);
+  const [index, setIndex] = useState(0);
+  const [score, setScore] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<(string | null)[]>([]);
-  const [timeLeft, setTimeLeft] = useState<number>(60); // 1 min per quiz
-  const [finished, setFinished] = useState<boolean>(false);
+  const [timeLeft, setTimeLeft] = useState(60);
+  const [finished, setFinished] = useState(false);
 
-  // Load questions for the selected topic
+  // Load questions
   useEffect(() => {
     fetch('/data/questions.json')
       .then((r) => r.json())
@@ -27,11 +29,10 @@ export default function QuizPlayer({ topic, onBack }: QuizPlayerProps) {
         setFinished(false);
         setSelectedAnswers(new Array(qs.length).fill(null));
         setTimeLeft(60);
-      })
-      .catch((err) => console.error('Failed to load questions:', err));
+      });
   }, [topic]);
 
-  // Timer countdown
+  // Timer
   useEffect(() => {
     if (finished || !questions.length) return;
     if (timeLeft <= 0) {
@@ -42,158 +43,134 @@ export default function QuizPlayer({ topic, onBack }: QuizPlayerProps) {
     return () => clearTimeout(timer);
   }, [timeLeft, finished, questions]);
 
-  const answered = selectedAnswers[index] !== null;
+  const handleAnswer = (correct: boolean, selectedOption: string) => {
+    if (finished || selectedAnswers[index]) return;
 
-  function handleAnswer(correct: boolean, selectedOption: string) {
-    if (answered || finished) return;
-
-    setSelectedAnswers((prev) => {
-      const copy = [...prev];
-      copy[index] = selectedOption;
-      return copy;
-    });
+    const updated = [...selectedAnswers];
+    updated[index] = selectedOption;
+    setSelectedAnswers(updated);
 
     if (correct) setScore((s) => s + 1);
-  }
 
-  function handleNext() {
-    if (index < questions.length - 1) setIndex((i) => i + 1);
-    else setFinished(true);
-  }
-
-  function handlePrevious() {
-    if (index > 0) setIndex((i) => i - 1);
-  }
-
-  // When quiz finished
-  if (finished || index >= questions.length)
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="text-center max-w-lg mx-auto bg-green-50 p-6 rounded-xl shadow"
-      >
-        <button
-          onClick={onBack}
-          className="mb-4 text-green-700 hover:underline"
-        >
-          ← Back
-        </button>
-        <h2 className="text-3xl font-bold mb-3">Quiz Finished!</h2>
-        <p className="text-lg mb-2">
-          Your score: <span className="font-semibold">{score}</span> /{' '}
-          {questions.length}
-        </p>
-        <p className="text-green-700 mb-4">
-          Accuracy:{' '}
-          {questions.length
-            ? ((score / questions.length) * 100).toFixed(1)
-            : 0}
-          %
-        </p>
-
-        <div className="bg-white rounded-lg p-3 shadow-inner text-left">
-          <h3 className="font-semibold mb-2">Your Answers:</h3>
-          {questions.map((q, i) => (
-            <div
-              key={i}
-              className={`p-2 rounded mb-1 ${
-                q.answer === selectedAnswers[i]
-                  ? 'bg-green-100'
-                  : 'bg-red-100'
-              }`}
-            >
-              <span className="font-medium">
-                Q{i + 1}: {q.question}
-              </span>
-              <div className="text-sm ml-3">
-                Your: {selectedAnswers[i] || '—'} | Correct:{' '}
-                {q.answer}
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-    );
+    setTimeout(() => {
+      if (index < questions.length - 1) setIndex((i) => i + 1);
+      else setFinished(true);
+    }, 800);
+  };
 
   if (!questions.length)
     return (
-      <div className="text-center p-6">
+      <div className="flex flex-col items-center justify-center h-screen">
         <button onClick={onBack} className="mb-4 text-green-700 hover:underline">
           ← Back
         </button>
-        <div>No questions found for this topic.</div>
+        <p>Loading questions...</p>
       </div>
     );
 
-  return (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -40 }}
-      transition={{ duration: 0.4 }}
-      className="max-w-2xl mx-auto p-6 bg-green-50 rounded-xl shadow"
-    >
-      <button onClick={onBack} className="mb-4 text-green-700 hover:underline">
-        ← Back
-      </button>
+  if (finished) {
+    const percentage = (score / questions.length) * 100;
+    let message = '';
+    let badge = '';
 
-      <AnimatePresence mode="wait">
-        <QuestionCard
-          key={index}
-          question={questions[index]}
-          onAnswer={handleAnswer}
-          answered={answered}
-          selectedOption={selectedAnswers[index] || null}
-        />
-      </AnimatePresence>
+    if (percentage >= 90) {
+      message = '🎉 Excellent! You are a Green Hero!';
+      badge = '🥇';
+    } else if (percentage >= 70) {
+      message = '👍 Good job! Keep learning!';
+      badge = '🥈';
+    } else {
+      message = '💡 Keep it up! Keep learning and practicing!';
+      badge = '🥉';
+    }
 
-      <div className="flex justify-between mt-4">
-        <button
-          onClick={handlePrevious}
-          className="px-4 py-2 bg-gray-300 text-gray-800 rounded shadow hover:bg-gray-400 transition"
-          disabled={index === 0}
+    return (
+      <div className="relative flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-b from-green-100 to-green-50 p-6 overflow-hidden">
+        <Confetti numberOfPieces={200} recycle={false} />
+
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: 'spring', stiffness: 120 }}
+          className="w-56 h-56 mb-6"
         >
-          ← Previous
+          <Lottie animationData={trophyAnim} loop={false} />
+        </motion.div>
+
+        <motion.h2
+          className="text-4xl font-bold mb-2 text-green-800 flex items-center gap-2 justify-center text-center"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+        >
+          {badge} You Finished!
+        </motion.h2>
+
+        <p className="text-xl mb-4 text-center">{message}</p>
+        <div className="flex items-center gap-2 text-2xl mb-4">
+          Score: {score}/{questions.length} 💎 ({Math.round(percentage)}%)
+        </div>
+
+        <motion.div className="grid grid-cols-4 gap-2 w-full max-w-sm">
+          {questions.map((q, i) => (
+            <motion.div
+              key={i}
+              className={`flex justify-center items-center text-2xl p-3 rounded-xl shadow ${
+                selectedAnswers[i] === q.answer ? 'bg-green-200' : 'bg-red-200'
+              }`}
+              whileHover={{ scale: 1.1 }}
+            >
+              {selectedAnswers[i] === q.answer ? '✅' : '❌'}
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <button
+          onClick={onBack}
+          className="mt-8 px-6 py-3 rounded-full bg-green-600 text-white text-xl shadow-lg hover:bg-green-700 transition-all"
+        >
+          🏠 Back Home
         </button>
-
-        {answered && index < questions.length - 1 && (
-          <button
-            onClick={handleNext}
-            className="px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition"
-          >
-            Next →
-          </button>
-        )}
-
-        {answered && index === questions.length - 1 && (
-          <button
-            onClick={() => setFinished(true)}
-            className="px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition"
-          >
-            Finish
-          </button>
-        )}
       </div>
+    );
+  }
 
-      <div className="mt-6">
-        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-          <motion.div
-            className="h-full bg-green-500"
-            style={{
-              width: `${((index + 1) / questions.length) * 100}%`,
-            }}
-            transition={{ duration: 0.4 }}
-          />
+  return (
+    <DndProvider backend={HTML5Backend}>
+      <div className="flex flex-col h-screen justify-between p-4 bg-gradient-to-b from-green-50 to-white overflow-hidden">
+        <div className="flex justify-between items-center mb-2 text-lg font-bold text-green-800">
+          <div className="flex items-center gap-2">⏳ {timeLeft}s</div>
+          <div className="flex items-center gap-2">💎 {score}</div>
+          <div className="flex-1 mx-2 h-2 bg-gray-200 rounded overflow-hidden">
+            <motion.div
+              className="h-full bg-green-500"
+              animate={{ width: `${((index + 1) / questions.length) * 100}%` }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
         </div>
-        <div className="flex justify-between text-sm mt-2 text-green-700">
-          <span>
-            Progress: {index + 1} / {questions.length}
-          </span>
-          <span>Time left: {timeLeft}s</span>
+
+        <div className="flex-1 flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            {questions[index] && (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100, rotate: 5, scale: 0.95 }}
+                animate={{ opacity: 1, x: 0, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -100, rotate: -5, scale: 0.95 }}
+                transition={{ duration: 0.5 }}
+                className="w-full flex justify-center max-w-xl"
+              >
+                <QuestionCard
+                  question={questions[index]}
+                  onAnswer={handleAnswer}
+                  answered={!!selectedAnswers[index]}
+                  selectedOption={selectedAnswers[index] || null}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
-    </motion.div>
+    </DndProvider>
   );
 }
