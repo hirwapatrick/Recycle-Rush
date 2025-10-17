@@ -1,4 +1,4 @@
-
+//Lottie.tsx
 import Lottie from "lottie-react"
 type headerProps ={
     animationData : {}

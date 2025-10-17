@@ -1,3 +1,4 @@
+//QuizPlayer.tsx
 import { useEffect, useState } from 'react';
 import QuestionCard, { Question } from './QuestionCard';
 import { motion, AnimatePresence } from 'framer-motion';

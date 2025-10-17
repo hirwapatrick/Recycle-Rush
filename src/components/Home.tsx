@@ -1,3 +1,5 @@
+//Home.tsx
+
 import { FaRecycle, FaBolt, FaTree, FaWater } from 'react-icons/fa';
 import Lotties from './Lotties';
 import bird from "../anime/running pigeon.json"
