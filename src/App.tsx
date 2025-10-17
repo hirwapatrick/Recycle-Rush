@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaLeaf } from "react-icons/fa";
 import Home from "./components/Home";
 import QuizPlayer from "./components/QuizPlayer";
@@ -8,9 +8,50 @@ import ecologyAnim from "./anime/Ecology.json";
 
 type View = "landing" | "home" | "quiz";
 
+// Track completed levels per topic
+type Progress = { [topic: string]: number };
+
 export default function App(): JSX.Element {
   const [view, setView] = useState<View>("landing");
   const [topic, setTopic] = useState<string | null>(null);
+  const [level, setLevel] = useState<number | null>(null);
+  const [progress, setProgress] = useState<Progress>({});
+
+  // Load progress from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("green_quiz_progress");
+    if (saved) setProgress(JSON.parse(saved));
+  }, []);
+
+  // Save progress to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("green_quiz_progress", JSON.stringify(progress));
+  }, [progress]);
+
+  const handleStartQuiz = (selectedTopic: string, selectedLevel: number) => {
+    setTopic(selectedTopic);
+    setLevel(selectedLevel);
+    setView("quiz");
+  };
+
+  const handleBackToHome = () => {
+    setView("home");
+    setTopic(null);
+    setLevel(null);
+  };
+
+  const handleNextLevel = () => {
+    if (topic && level !== null) {
+      const lastCompleted = progress[topic] || 0;
+      const newCompleted = Math.max(lastCompleted, level); // mark level as completed
+      setProgress({ ...progress, [topic]: newCompleted });
+
+      if (level < 5) setLevel(level + 1); // next level if exists
+      else setView("home"); // finished all levels
+    }
+  };
+
+  const handleRetry = () => setView("quiz"); // retry same level
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-gradient-to-b from-green-100 via-green-50 to-white flex flex-col">
@@ -29,9 +70,8 @@ export default function App(): JSX.Element {
         )}
       </header>
 
-      {/* Main Content */}
+      {/* Main */}
       <main className="flex-1 flex justify-center items-center p-6">
-        {/* 🌍 Landing Page */}
         {view === "landing" && (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -62,19 +102,21 @@ export default function App(): JSX.Element {
           </motion.div>
         )}
 
-        {/* 🧩 Home Page */}
         {view === "home" && (
           <Home
-            onSelectTopic={(t: string) => {
-              setTopic(t);
-              setView("quiz");
-            }}
+            onStartQuiz={handleStartQuiz}
+            progress={progress} // pass progress to Home
           />
         )}
 
-        {/* 🏆 Quiz Player */}
-        {view === "quiz" && topic && (
-          <QuizPlayer topic={topic} onBack={() => setView("home")} />
+        {view === "quiz" && topic && level !== null && (
+          <QuizPlayer
+            topic={topic}
+            level={level}
+            onBack={handleBackToHome}
+            onNextLevel={handleNextLevel}
+            onRetry={handleRetry}
+          />
         )}
       </main>
 
