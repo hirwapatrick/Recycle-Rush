@@ -1,4 +1,5 @@
-import { useEffect, useState, useCallback } from 'react';
+//QuizPlayer.tsx
+import { useEffect, useState } from 'react';
 import QuestionCard, { Question } from './QuestionCard';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lottie from 'lottie-react';
@@ -7,20 +8,9 @@ import Confetti from 'react-confetti';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-type QuizPlayerProps = {
-  topic: string;
-  level: number;
-  onBack: () => void;
-  onNextLevel: () => void;
-  onRetry: () => void;
-};
+type QuizPlayerProps = { topic: string; onBack: () => void };
 
-export default function QuizPlayer({
-  topic,
-  level,
-  onBack,
-  onNextLevel,
-}: QuizPlayerProps) {
+export default function QuizPlayer({ topic, onBack }: QuizPlayerProps) {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -28,25 +18,20 @@ export default function QuizPlayer({
   const [timeLeft, setTimeLeft] = useState(60);
   const [finished, setFinished] = useState(false);
 
-  // Load questions for the level
-  const loadLevelQuestions = useCallback(() => {
+  // Load questions
+  useEffect(() => {
     fetch('/data/questions.json')
-      .then(r => r.json())
-      .then(data => {
-        const qs = data[topic]?.[level - 1] || []; // questions for current level
-        const levelQuestions = qs.slice(0, 5);
-        setQuestions(levelQuestions);
+      .then((r) => r.json())
+      .then((data) => {
+        const qs = data[topic] || [];
+        setQuestions(qs);
         setIndex(0);
         setScore(0);
         setFinished(false);
-        setSelectedAnswers(new Array(levelQuestions.length).fill(null));
+        setSelectedAnswers(new Array(qs.length).fill(null));
         setTimeLeft(60);
       });
-  }, [topic, level]);
-
-  useEffect(() => {
-    loadLevelQuestions();
-  }, [loadLevelQuestions]);
+  }, [topic]);
 
   // Timer
   useEffect(() => {
@@ -55,7 +40,7 @@ export default function QuizPlayer({
       setFinished(true);
       return;
     }
-    const timer = setTimeout(() => setTimeLeft(t => t - 1), 1000);
+    const timer = setTimeout(() => setTimeLeft((t) => t - 1), 1000);
     return () => clearTimeout(timer);
   }, [timeLeft, finished, questions]);
 
@@ -66,21 +51,12 @@ export default function QuizPlayer({
     updated[index] = selectedOption;
     setSelectedAnswers(updated);
 
-    if (correct) setScore(s => s + 1);
+    if (correct) setScore((s) => s + 1);
 
     setTimeout(() => {
-      if (index < questions.length - 1) setIndex(i => i + 1);
+      if (index < questions.length - 1) setIndex((i) => i + 1);
       else setFinished(true);
     }, 800);
-  };
-
-  const handleNext = () => {
-    onNextLevel();
-  };
-
-  // UPDATED retry: resets everything for current level
-  const handleRetryLevel = () => {
-    loadLevelQuestions(); // reload same level questions
   };
 
   if (!questions.length)
@@ -95,8 +71,6 @@ export default function QuizPlayer({
 
   if (finished) {
     const percentage = (score / questions.length) * 100;
-    const passed = percentage >= 70;
-
     let message = '';
     let badge = '';
 
@@ -151,30 +125,12 @@ export default function QuizPlayer({
           ))}
         </motion.div>
 
-        <div className="flex gap-4 mt-6">
-          {passed && (
-            <button
-              onClick={handleNext}
-              className="px-6 py-3 rounded-full bg-green-600 text-white text-xl shadow-lg hover:bg-green-700 transition-all"
-            >
-              ▶ Next Level
-            </button>
-          )}
-          {!passed && (
-            <button
-              onClick={handleRetryLevel}
-              className="px-6 py-3 rounded-full bg-yellow-600 text-white text-xl shadow-lg hover:bg-yellow-700 transition-all"
-            >
-              🔄 Retry Level
-            </button>
-          )}
-          <button
-            onClick={onBack}
-            className="px-6 py-3 rounded-full bg-green-400 text-white text-xl shadow-lg hover:bg-green-500 transition-all"
-          >
-            🏠 Back Home
-          </button>
-        </div>
+        <button
+          onClick={onBack}
+          className="mt-8 px-6 py-3 rounded-full bg-green-600 text-white text-xl shadow-lg hover:bg-green-700 transition-all"
+        >
+          🏠 Back Home
+        </button>
       </div>
     );
   }

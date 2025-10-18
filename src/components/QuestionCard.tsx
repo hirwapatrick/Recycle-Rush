@@ -1,4 +1,4 @@
-//QuestionCard.tsx
+//QuestionCrd.tsx
 import { useState, useEffect } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import Lottie from 'lottie-react';
