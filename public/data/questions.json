@@ -63,6 +63,102 @@
         "answer": "Old paint cans",
         "explanation": "Hazardous waste can be toxic and requires special disposal."
       }
+    ],
+    [
+      {
+        "question": "Which of these is biodegradable?",
+        "options": ["Plastic bottle", "Banana peel", "Styrofoam cup", "Aluminum foil"],
+        "answer": "Banana peel",
+        "explanation": "Organic materials like banana peels decompose naturally."
+      },
+      {
+        "question": "What is the main goal of recycling?",
+        "options": ["Save money", "Reduce waste and save resources", "Increase landfill size", "Pollute soil"],
+        "answer": "Reduce waste and save resources",
+        "explanation": "Recycling helps conserve resources and reduce landfill waste."
+      },
+      {
+        "question": "How should food scraps be handled in recycling?",
+        "options": ["Throw in blue bin", "Compost", "Burn them", "Throw in trash"],
+        "answer": "Compost",
+        "explanation": "Organic food waste should be composted for soil enrichment."
+      },
+      {
+        "question": "Plastic takes how long to decompose?",
+        "options": ["1 year", "10 years", "100-1000 years", "1 month"],
+        "answer": "100-1000 years",
+        "explanation": "Plastic can persist for hundreds of years in the environment."
+      },
+      {
+        "question": "Which material is safest for reusable containers?",
+        "options": ["Plastic", "Glass", "Aluminum foil", "Styrofoam"],
+        "answer": "Glass",
+        "explanation": "Glass is safe, reusable, and recyclable."
+      }
+    ],
+    [
+      {
+        "question": "Which is a good way to reduce e-waste?",
+        "options": ["Upgrade frequently", "Repair old devices", "Throw devices in trash", "Buy new gadgets only"],
+        "answer": "Repair old devices",
+        "explanation": "Repairing extends device life and reduces e-waste."
+      },
+      {
+        "question": "Which of these should not go in a compost bin?",
+        "options": ["Vegetable scraps", "Plastic bag", "Eggshells", "Coffee grounds"],
+        "answer": "Plastic bag",
+        "explanation": "Non-organic items like plastic cannot decompose in compost."
+      },
+      {
+        "question": "What is landfill?",
+        "options": ["Recycling center", "Place where waste is buried", "Compost bin", "Water treatment plant"],
+        "answer": "Place where waste is buried",
+        "explanation": "Landfills are designated areas for disposing waste underground."
+      },
+      {
+        "question": "How to minimize food waste?",
+        "options": ["Buy only what you need", "Buy in bulk without planning", "Throw leftovers", "Cook too much"],
+        "answer": "Buy only what you need",
+        "explanation": "Planning purchases reduces unnecessary food waste."
+      },
+      {
+        "question": "Which is NOT a recyclable material?",
+        "options": ["Aluminum can", "Glass bottle", "Pizza box with grease", "Paper"],
+        "answer": "Pizza box with grease",
+        "explanation": "Grease contaminates recycling and prevents proper processing."
+      }
+    ],
+    [
+      {
+        "question": "Which is a correct 3R practice?",
+        "options": ["Reduce, Reuse, Recycle", "Remove, Reuse, Recycle", "Reduce, Replace, Reuse", "Reproduce, Recycle, Reduce"],
+        "answer": "Reduce, Reuse, Recycle",
+        "explanation": "The 3Rs help conserve resources and reduce waste."
+      },
+      {
+        "question": "What is upcycling?",
+        "options": ["Throwing away old items", "Turning old items into something useful", "Burning waste", "Burying waste"],
+        "answer": "Turning old items into something useful",
+        "explanation": "Upcycling creatively reuses old materials to create new products."
+      },
+      {
+        "question": "Which bin is for hazardous household waste?",
+        "options": ["Blue", "Green", "Red", "Yellow"],
+        "answer": "Red",
+        "explanation": "Hazardous items like batteries and paints go in red bins."
+      },
+      {
+        "question": "What does 'compostable' mean?",
+        "options": ["Can be recycled", "Can decompose naturally", "Can be burned", "Can be thrown in trash"],
+        "answer": "Can decompose naturally",
+        "explanation": "Compostable materials break down into natural soil nutrients."
+      },
+      {
+        "question": "Which is a sustainable habit?",
+        "options": ["Using single-use plastic", "Walking or cycling", "Buying fast fashion", "Leaving lights on"],
+        "answer": "Walking or cycling",
+        "explanation": "Eco-friendly transport reduces pollution and conserves energy."
+      }
     ]
   ],
   "energy_conservation": [
@@ -128,6 +224,74 @@
         "options": ["Short showers", "Long baths", "Keeping taps running", "Using cold water only for dishes"],
         "answer": "Short showers",
         "explanation": "Reducing hot water use saves electricity and energy."
+      }
+    ]
+  ],
+  "tree_planting": [
+    [
+      {
+        "question": "Why are trees important for the environment?",
+        "options": ["Provide oxygen", "Produce waste", "Pollute air", "Reduce soil fertility"],
+        "answer": "Provide oxygen",
+        "explanation": "Trees absorb CO2 and release oxygen."
+      },
+      {
+        "question": "What is deforestation?",
+        "options": ["Planting trees", "Cutting down trees", "Watering plants", "Protecting forests"],
+        "answer": "Cutting down trees",
+        "explanation": "Deforestation is the removal of trees for land or resources."
+      },
+      {
+        "question": "Which tree part absorbs water from soil?",
+        "options": ["Leaves", "Trunk", "Roots", "Branches"],
+        "answer": "Roots",
+        "explanation": "Roots take in water and nutrients from soil."
+      },
+      {
+        "question": "What is reforestation?",
+        "options": ["Cutting trees", "Planting new trees", "Destroying forests", "Burning leaves"],
+        "answer": "Planting new trees",
+        "explanation": "Reforestation restores tree cover to degraded areas."
+      },
+      {
+        "question": "Which animal benefits from trees?",
+        "options": ["Birds", "Fish", "Snakes", "Ants"],
+        "answer": "Birds",
+        "explanation": "Trees provide shelter and food for birds."
+      }
+    ]
+  ],
+  "water_conservation": [
+    [
+      {
+        "question": "Why is water conservation important?",
+        "options": ["Water is unlimited", "Water is scarce", "Water can be made easily", "Water is useless"],
+        "answer": "Water is scarce",
+        "explanation": "Freshwater resources are limited and should be used wisely."
+      },
+      {
+        "question": "How can you save water at home?",
+        "options": ["Leave taps running", "Fix leaks", "Water garden at noon", "Ignore dripping taps"],
+        "answer": "Fix leaks",
+        "explanation": "Repairing leaks reduces water wastage."
+      },
+      {
+        "question": "What is rainwater harvesting?",
+        "options": ["Draining water", "Collecting and storing rainwater", "Polluting water", "Using bottled water"],
+        "answer": "Collecting and storing rainwater",
+        "explanation": "Rainwater can be collected for future use."
+      },
+      {
+        "question": "Which activity wastes the most water?",
+        "options": ["Long showers", "Short showers", "Turning off taps", "Using efficient appliances"],
+        "answer": "Long showers",
+        "explanation": "Shorter showers save water significantly."
+      },
+      {
+        "question": "How to reduce water use in gardening?",
+        "options": ["Water at night or early morning", "Water in the afternoon", "Use sprinklers at noon", "Leave taps open"],
+        "answer": "Water at night or early morning",
+        "explanation": "Watering in cooler times reduces evaporation."
       }
     ]
   ]

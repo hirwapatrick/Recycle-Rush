@@ -34,7 +34,7 @@ export default function QuizPlayer({
       .then(r => r.json())
       .then(data => {
         const qs = data[topic]?.[level - 1] || []; // questions for current level
-        const levelQuestions = qs.slice(0, 5);
+        const levelQuestions = qs.slice(0, 3);
         setQuestions(levelQuestions);
         setIndex(0);
         setScore(0);
