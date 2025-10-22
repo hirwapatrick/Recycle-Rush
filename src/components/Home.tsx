@@ -1,5 +1,6 @@
+//Home.tsx
 import { useState } from "react";
-import { FaRecycle, FaBolt, FaTree, FaWater } from "react-icons/fa";
+import { FaRecycle, FaBolt, FaTree, FaWater, FaLock } from "react-icons/fa";
 import Lotties from "./Lotties";
 import LevelSelector from "./LevelSelector";
 import bird from "../anime/running pigeon.json";
@@ -7,7 +8,7 @@ import bird from "../anime/running pigeon.json";
 type Topic = { id: string; name: string; icon: JSX.Element };
 type HomeProps = {
   onStartQuiz: (topic: string, level: number) => void;
-  progress?: { [topic: string]: number }; // last completed levels
+  progress?: { [topic: string]: number }; // last completed levels per topic
 };
 
 const topics: Topic[] = [
@@ -25,7 +26,7 @@ export default function Home({ onStartQuiz, progress = {} }: HomeProps) {
       <div className="flex flex-col items-center">
         <LevelSelector
           topic={selectedTopic}
-          lastCompletedLevel={progress[selectedTopic] || 0} // pass last completed
+          lastCompletedLevel={progress[selectedTopic] || 0}
           onSelectLevel={(topic, level) => onStartQuiz(topic, level)}
         />
         <button
@@ -49,17 +50,31 @@ export default function Home({ onStartQuiz, progress = {} }: HomeProps) {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {topics.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => setSelectedTopic(t.id)}
-              className="p-6 rounded-2xl border-2 border-green-300 bg-green-50 hover:bg-green-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col items-center gap-4"
-            >
-              <div className="text-5xl text-green-600 animate-bounce">{t.icon}</div>
-              <h2 className="text-xl font-semibold text-green-800">{t.name}</h2>
-              <p className="text-sm mt-1 text-green-600">Tap to start</p>
-            </button>
-          ))}
+          {topics.map((t, idx) => {
+            // First topic is always unlocked, others unlocked if previous topic has all 5 levels completed
+            const unlocked =
+              idx === 0 || (progress[topics[idx - 1].id] || 0) === 5;
+
+            return (
+              <button
+                key={t.id}
+                onClick={() => unlocked && setSelectedTopic(t.id)}
+                className={`p-6 rounded-2xl border-2 border-green-300 ${
+                  unlocked
+                    ? "bg-green-50 hover:bg-green-100 hover:shadow-xl transform hover:scale-105"
+                    : "bg-gray-300 cursor-not-allowed opacity-60"
+                } transition-all duration-300 flex flex-col items-center gap-4`}
+              >
+                <div className="text-5xl text-green-600 animate-bounce">
+                  {unlocked ? t.icon : <FaLock />}
+                </div>
+                <h2 className="text-xl font-semibold text-green-800">{t.name}</h2>
+                <p className="text-sm mt-1 text-green-600">
+                  {unlocked ? "Tap to start" : "Locked"}
+                </p>
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>

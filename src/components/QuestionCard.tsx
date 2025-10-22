@@ -1,51 +1,47 @@
-//QuestionCard.tsx
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import Lottie from 'lottie-react';
 import Confetti from 'react-confetti';
 import correctAnim from '../anime/correct.json';
 import wrongAnim from '../anime/incorrect.json';
 
-export type Question = {
-  question: string;
-  options: string[];
-  answer: string;
-  explanation?: string;
-};
+export type Option = { label: string; image: string };
+export type Question = { question: string; options: Option[]; answer: string };
 
 type QuestionCardProps = {
   question: Question;
   onAnswer: (correct: boolean, selectedOption: string) => void;
-  answered: boolean;
-  selectedOption?: string | null; // <- add this line
 };
 
-type DragItem = {
-  text: string;
-};
+type DragItem = { label: string };
 
-export default function QuestionCard({ question, onAnswer, answered }: QuestionCardProps) {
+export default function QuestionCard({ question, onAnswer }: QuestionCardProps) {
+  const [answered, setAnswered] = useState(false);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [showAnim, setShowAnim] = useState<'correct' | 'wrong' | null>(null);
   const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
+    // Reset state when question changes
+    setAnswered(false);
+    setSelectedOption(null);
     setShowAnim(null);
     setShowConfetti(false);
   }, [question]);
 
   const handleDrop = (item: DragItem) => {
     if (answered) return;
-    const correct = item.text === question.answer;
-    onAnswer(correct, item.text);
-    if (correct) {
-      setShowAnim('correct');
-      setShowConfetti(true);
-      setTimeout(() => setShowAnim(null), 1500);
-      setTimeout(() => setShowConfetti(false), 2000);
-    } else {
-      setShowAnim('wrong');
-      setTimeout(() => setShowAnim(null), 1500);
-    }
+
+    const correct = item.label === question.answer;
+    setAnswered(true);
+    setSelectedOption(item.label);
+    setShowAnim(correct ? 'correct' : 'wrong');
+    if (correct) setShowConfetti(true);
+
+    onAnswer(correct, item.label);
+
+    setTimeout(() => setShowAnim(null), 1500);
+    setTimeout(() => setShowConfetti(false), 2000);
   };
 
   const [{ isOver }, drop] = useDrop({
@@ -57,7 +53,6 @@ export default function QuestionCard({ question, onAnswer, answered }: QuestionC
   return (
     <div className="relative p-6 rounded-xl border-2 border-green-300 bg-green-50 shadow-lg max-w-xl mx-auto overflow-hidden">
       {showConfetti && <Confetti numberOfPieces={100} recycle={false} />}
-
       {showAnim && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-50">
           <div className="w-40 h-40">
@@ -74,22 +69,27 @@ export default function QuestionCard({ question, onAnswer, answered }: QuestionC
           isOver ? 'border-green-600 bg-green-100' : 'border-gray-300 bg-white'
         }`}
       >
-        {answered ? question.answer : 'Drop your answer here'}
+        {answered
+          ? selectedOption === question.answer
+            ? '✅ Correct!'
+            : `❌ Wrong! Correct: ${question.answer}`
+          : 'Drop your answer here'}
       </div>
 
       <div className="flex flex-wrap justify-center gap-4">
         {question.options.map((opt) => (
-          <DraggableOption key={opt} text={opt} answered={answered} />
+          <DraggableOption key={opt.label} label={opt.label} image={opt.image} answered={answered} />
         ))}
       </div>
     </div>
   );
 }
 
-function DraggableOption({ text, answered }: { text: string; answered: boolean }) {
+// ----------------- Draggable Option -----------------
+function DraggableOption({ label, image, answered }: { label: string; image: string; answered: boolean }) {
   const [{ isDragging }, drag] = useDrag({
     type: 'option',
-    item: { text },
+    item: { label },
     canDrag: !answered,
     collect: (monitor) => ({ isDragging: !!monitor.isDragging() }),
   });
@@ -97,11 +97,12 @@ function DraggableOption({ text, answered }: { text: string; answered: boolean }
   return (
     <div
       ref={drag}
-      className={`p-4 bg-green-200 rounded-lg cursor-move hover:scale-105 transform transition ${
+      className={`p-2 bg-green-200 rounded-lg cursor-move hover:scale-105 transform transition flex flex-col items-center gap-1 ${
         isDragging ? 'opacity-50' : ''
-      } text-lg font-semibold`}
+      }`}
     >
-      {text}
+      <img src={image} alt={label} className="w-20 h-20 object-contain rounded-lg shadow" />
+      <span className="text-center text-sm font-semibold">{label}</span>
     </div>
   );
 }
