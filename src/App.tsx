@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import ecologyAnim from "./anime/Ecology.json";
@@ -16,25 +16,53 @@ import {
   Avalanche,
   Award,
   AirplaneSquare,
+  VolumeCross,
+  VolumeHigh,
 } from "iconsax-reactjs";
 
+import bgVideo from "/bg.mp4"; 
+import bgMusic from "/bg-music.mp3";
+
 type View = "landing" | "home" | "quiz";
-type Progress = { [topic: string]: number };
+type Progress = Record<string, number>;
 
 export default function App() {
   const [view, setView] = useState<View>("landing");
   const [topic, setTopic] = useState<string | null>(null);
   const [level, setLevel] = useState<number | null>(null);
   const [progress, setProgress] = useState<Progress>({});
+  const [isMuted, setIsMuted] = useState<boolean>(true); // 🎵 Mute toggle
 
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  // ✅ Load saved progress
   useEffect(() => {
     const saved = localStorage.getItem("green_quiz_progress");
-    if (saved) setProgress(JSON.parse(saved));
+    if (saved) {
+      try {
+        setProgress(JSON.parse(saved));
+      } catch {
+        console.warn("Failed to parse saved progress");
+      }
+    }
   }, []);
 
+  // ✅ Save progress
   useEffect(() => {
     localStorage.setItem("green_quiz_progress", JSON.stringify(progress));
   }, [progress]);
+
+  // ✅ Background Music Control
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isMuted) {
+      audio.pause();
+    } else {
+      audio.play().catch(() => console.log("Autoplay blocked, user interaction needed"));
+    }
+  }, [isMuted, view]);
 
   const handleStartQuiz = (selectedTopic: string, selectedLevel: number) => {
     setTopic(selectedTopic);
@@ -52,18 +80,19 @@ export default function App() {
     if (topic && level !== null) {
       const lastCompleted = progress[topic] || 0;
       const newCompleted = Math.max(lastCompleted, level);
-      setProgress({ ...progress, [topic]: newCompleted });
+      setProgress((prev) => ({ ...prev, [topic]: newCompleted }));
 
-      if (level < 5) setLevel(level + 1);
-      else setView("home");
+      if (level < 5) {
+        setLevel(level + 1);
+      } else {
+        setView("home");
+      }
     }
   };
 
-  const handleRetry = () => {
-    // Just reload QuizPlayer with the same level
-    setView("quiz");
-  };
+  const handleRetry = () => setView("quiz");
 
+  // ✅ Animated floating icons
   const icons = [
     { icon: <Airdrop variant="Bold" size="32" color="#1F7A2E" />, x: 50, y: 50, rotate: true },
     { icon: <Aquarius variant="Bold" size="32" color="#0DAB76" />, x: 200, y: 80 },
@@ -80,22 +109,52 @@ export default function App() {
   ];
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gradient-to-b from-green-100 via-green-50 to-white relative flex flex-col">
-      <header className="flex items-center justify-between px-6 py-4 bg-green-200 shadow-lg z-20">
+    <div className="h-screen w-screen overflow-hidden relative flex flex-col">
+      {/* 🎥 Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        src={bgVideo}
+        autoPlay
+        loop
+        muted={isMuted} // sync mute state with sound
+      />
+
+      {/* 🎵 Background Music */}
+      <audio ref={audioRef} src={bgMusic} loop preload="auto" />
+
+      {/* ✅ Header */}
+      <header className="flex items-center justify-between px-6 py-4 bg-green-200 bg-opacity-70 backdrop-blur-md shadow-lg z-20">
         <h1 className="text-3xl font-extrabold text-green-900 flex items-center gap-2 animate-pulse">
           <Airdrop variant="Bold" size="28" color="#0DAB76" /> Green Quiz Game
         </h1>
-        {view !== "landing" && (
+
+        <div className="flex items-center gap-4">
+          {/* 🎵 Music Toggle */}
           <button
-            onClick={() => setView("landing")}
-            className="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition"
+            onClick={() => setIsMuted((prev) => !prev)}
+            className="p-2 rounded-full bg-green-700 text-white shadow hover:bg-green-800 transition"
           >
-            ← Back
+            {isMuted ? (
+              <VolumeCross size="24" color="#fff" variant="Bold" />
+            ) : (
+              <VolumeHigh size="24" color="#fff" variant="Bold" />
+            )}
           </button>
-        )}
+
+          {view !== "landing" && (
+            <button
+              onClick={() => setView("landing")}
+              className="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition"
+            >
+              ← Back
+            </button>
+          )}
+        </div>
       </header>
 
+      {/* ✅ Main Section */}
       <main className="flex-1 flex justify-center items-center p-6 relative overflow-hidden">
+        {/* Landing Page */}
         {view === "landing" && (
           <>
             {icons.map((i, idx) => (
@@ -128,6 +187,7 @@ export default function App() {
             >
               Welcome to <span className="text-green-700">Aquarius Rush!</span>
             </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -148,20 +208,20 @@ export default function App() {
           </>
         )}
 
+        {/* Home Page */}
         {view === "home" && <Home onStartQuiz={handleStartQuiz} progress={progress} />}
 
+        {/* Quiz Page */}
         {view === "quiz" && topic && level !== null && (
           <QuizPlayer
             topic={topic}
             level={level}
             onBack={handleBackToHome}
             onNextLevel={handleNextLevel}
-            onRetry={handleRetry} // Pass retry to QuizPlayer for drag-and-drop reset
+            onRetry={handleRetry}
           />
         )}
       </main>
-
-      
     </div>
   );
 }

@@ -12,6 +12,7 @@ type QuizPlayerProps = {
   level: number;
   onBack: () => void;
   onNextLevel: () => void;
+  onRetry: () => void; 
 };
 
 export default function QuizPlayer({ topic, level, onBack, onNextLevel }: QuizPlayerProps) {
