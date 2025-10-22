@@ -1,3 +1,4 @@
+//LevelSelector.tsx 
 import { motion } from "framer-motion";
 import { FaLock, FaCheckCircle } from "react-icons/fa";
 

@@ -1,3 +1,4 @@
+//Home.tsx
 import { useState } from "react";
 import { FaRecycle, FaBolt, FaTree, FaWater, FaLock } from "react-icons/fa";
 import Lotties from "./Lotties";

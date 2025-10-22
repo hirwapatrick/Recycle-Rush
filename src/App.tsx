@@ -19,8 +19,6 @@ import {
 } from "iconsax-reactjs";
 
 type View = "landing" | "home" | "quiz";
-
-// Track completed levels per topic
 type Progress = { [topic: string]: number };
 
 export default function App() {
@@ -29,13 +27,11 @@ export default function App() {
   const [level, setLevel] = useState<number | null>(null);
   const [progress, setProgress] = useState<Progress>({});
 
-  // Load progress from localStorage
   useEffect(() => {
     const saved = localStorage.getItem("green_quiz_progress");
     if (saved) setProgress(JSON.parse(saved));
   }, []);
 
-  // Save progress to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("green_quiz_progress", JSON.stringify(progress));
   }, [progress]);
@@ -55,17 +51,19 @@ export default function App() {
   const handleNextLevel = () => {
     if (topic && level !== null) {
       const lastCompleted = progress[topic] || 0;
-      const newCompleted = Math.max(lastCompleted, level); // mark level as completed
+      const newCompleted = Math.max(lastCompleted, level);
       setProgress({ ...progress, [topic]: newCompleted });
 
-      if (level < 5) setLevel(level + 1); // next level if exists
-      else setView("home"); // finished all levels
+      if (level < 5) setLevel(level + 1);
+      else setView("home");
     }
   };
 
-  const handleRetry = () => setView("quiz"); // retry same level
+  const handleRetry = () => {
+    // Just reload QuizPlayer with the same level
+    setView("quiz");
+  };
 
-  // Landing page floating icons
   const icons = [
     { icon: <Airdrop variant="Bold" size="32" color="#1F7A2E" />, x: 50, y: 50, rotate: true },
     { icon: <Aquarius variant="Bold" size="32" color="#0DAB76" />, x: 200, y: 80 },
@@ -83,7 +81,6 @@ export default function App() {
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-gradient-to-b from-green-100 via-green-50 to-white relative flex flex-col">
-      {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 bg-green-200 shadow-lg z-20">
         <h1 className="text-3xl font-extrabold text-green-900 flex items-center gap-2 animate-pulse">
           <Airdrop variant="Bold" size="28" color="#0DAB76" /> Green Quiz Game
@@ -98,11 +95,9 @@ export default function App() {
         )}
       </header>
 
-      {/* Main */}
       <main className="flex-1 flex justify-center items-center p-6 relative overflow-hidden">
         {view === "landing" && (
           <>
-            {/* Floating animated icons */}
             {icons.map((i, idx) => (
               <motion.div
                 key={idx}
@@ -121,12 +116,10 @@ export default function App() {
               </motion.div>
             ))}
 
-            {/* Lottie Hero Animation */}
             <div className="w-64 h-64 mb-6 z-20">
               <Lottie animationData={ecologyAnim} loop />
             </div>
 
-            {/* Welcome Text */}
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -144,7 +137,6 @@ export default function App() {
               Learn about the environment through fun, interactive quizzes and mini-games! 🌿
             </motion.p>
 
-            {/* Start Button */}
             <motion.button
               whileHover={{ scale: 1.2, rotate: [0, 5, -5, 0] }}
               whileTap={{ scale: 0.95 }}
@@ -164,18 +156,12 @@ export default function App() {
             level={level}
             onBack={handleBackToHome}
             onNextLevel={handleNextLevel}
-            onRetry={handleRetry}
+            onRetry={handleRetry} // Pass retry to QuizPlayer for drag-and-drop reset
           />
         )}
       </main>
 
-      {/* Footer */}
-      {view !== "landing" && (
-        <footer className="bg-green-100 p-3 flex justify-between items-center text-green-900 font-semibold shadow-inner z-20">
-          <span>🍀 Keep learning and have fun!</span>
-          <span>💎 Score Tracker</span>
-        </footer>
-      )}
+      
     </div>
   );
 }

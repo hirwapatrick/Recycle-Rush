@@ -1,298 +1,488 @@
 {
   "waste_management": [
-    [
-      {
-        "question": "Which bin should you put paper in?",
-        "options": ["Green", "Blue", "Red", "Yellow"],
-        "answer": "Blue",
-        "explanation": "Blue bins are for recyclables like paper and cardboard."
-      },
-      {
-        "question": "Which of these is compostable?",
-        "options": ["Plastic bottle", "Banana peel", "Glass jar", "Styrofoam"],
-        "answer": "Banana peel",
-        "explanation": "Organic food waste can be composted."
-      },
-      {
-        "question": "Where should glass bottles go?",
-        "options": ["Green bin", "Blue bin", "Red bin", "Yellow bin"],
-        "answer": "Blue bin",
-        "explanation": "Glass bottles are recyclable and go into blue bins."
-      },
-      {
-        "question": "Which item should NOT be recycled?",
-        "options": ["Aluminum cans", "Plastic bags", "Newspapers", "Cardboard"],
-        "answer": "Plastic bags",
-        "explanation": "Plastic bags can jam recycling machines and should be reused or disposed properly."
-      },
-      {
-        "question": "What is e-waste?",
-        "options": ["Electronic waste", "Organic waste", "Plastic waste", "Paper waste"],
-        "answer": "Electronic waste",
-        "explanation": "E-waste refers to discarded electronic devices."
-      }
-    ],
-    [
-      {
-        "question": "How can you reduce plastic waste?",
-        "options": ["Use single-use plastics", "Use reusable bags", "Burn plastics", "Throw plastics in water"],
-        "answer": "Use reusable bags",
-        "explanation": "Using reusable items reduces plastic waste significantly."
-      },
-      {
-        "question": "What is the correct way to dispose of batteries?",
-        "options": ["Throw in trash", "Recycle at special centers", "Burn them", "Bury them"],
-        "answer": "Recycle at special centers",
-        "explanation": "Batteries contain hazardous chemicals and should be recycled properly."
-      },
-      {
-        "question": "Which type of waste should be composted?",
-        "options": ["Metal scraps", "Food scraps", "Plastic bottles", "Glass jars"],
-        "answer": "Food scraps",
-        "explanation": "Organic food waste can be broken down into compost."
-      },
-      {
-        "question": "What does the term 'reduce' mean in waste management?",
-        "options": ["Use less and avoid unnecessary waste", "Recycle everything", "Burn trash", "Dump waste in water"],
-        "answer": "Use less and avoid unnecessary waste",
-        "explanation": "Reducing means minimizing waste at the source."
-      },
-      {
-        "question": "Which is a hazardous waste?",
-        "options": ["Old paint cans", "Banana peels", "Cardboard", "Glass bottles"],
-        "answer": "Old paint cans",
-        "explanation": "Hazardous waste can be toxic and requires special disposal."
-      }
-    ],
-    [
-      {
-        "question": "Which of these is biodegradable?",
-        "options": ["Plastic bottle", "Banana peel", "Styrofoam cup", "Aluminum foil"],
-        "answer": "Banana peel",
-        "explanation": "Organic materials like banana peels decompose naturally."
-      },
-      {
-        "question": "What is the main goal of recycling?",
-        "options": ["Save money", "Reduce waste and save resources", "Increase landfill size", "Pollute soil"],
-        "answer": "Reduce waste and save resources",
-        "explanation": "Recycling helps conserve resources and reduce landfill waste."
-      },
-      {
-        "question": "How should food scraps be handled in recycling?",
-        "options": ["Throw in blue bin", "Compost", "Burn them", "Throw in trash"],
-        "answer": "Compost",
-        "explanation": "Organic food waste should be composted for soil enrichment."
-      },
-      {
-        "question": "Plastic takes how long to decompose?",
-        "options": ["1 year", "10 years", "100-1000 years", "1 month"],
-        "answer": "100-1000 years",
-        "explanation": "Plastic can persist for hundreds of years in the environment."
-      },
-      {
-        "question": "Which material is safest for reusable containers?",
-        "options": ["Plastic", "Glass", "Aluminum foil", "Styrofoam"],
-        "answer": "Glass",
-        "explanation": "Glass is safe, reusable, and recyclable."
-      }
-    ],
-    [
-      {
-        "question": "Which is a good way to reduce e-waste?",
-        "options": ["Upgrade frequently", "Repair old devices", "Throw devices in trash", "Buy new gadgets only"],
-        "answer": "Repair old devices",
-        "explanation": "Repairing extends device life and reduces e-waste."
-      },
-      {
-        "question": "Which of these should not go in a compost bin?",
-        "options": ["Vegetable scraps", "Plastic bag", "Eggshells", "Coffee grounds"],
-        "answer": "Plastic bag",
-        "explanation": "Non-organic items like plastic cannot decompose in compost."
-      },
-      {
-        "question": "What is landfill?",
-        "options": ["Recycling center", "Place where waste is buried", "Compost bin", "Water treatment plant"],
-        "answer": "Place where waste is buried",
-        "explanation": "Landfills are designated areas for disposing waste underground."
-      },
-      {
-        "question": "How to minimize food waste?",
-        "options": ["Buy only what you need", "Buy in bulk without planning", "Throw leftovers", "Cook too much"],
-        "answer": "Buy only what you need",
-        "explanation": "Planning purchases reduces unnecessary food waste."
-      },
-      {
-        "question": "Which is NOT a recyclable material?",
-        "options": ["Aluminum can", "Glass bottle", "Pizza box with grease", "Paper"],
-        "answer": "Pizza box with grease",
-        "explanation": "Grease contaminates recycling and prevents proper processing."
-      }
-    ],
-    [
-      {
-        "question": "Which is a correct 3R practice?",
-        "options": ["Reduce, Reuse, Recycle", "Remove, Reuse, Recycle", "Reduce, Replace, Reuse", "Reproduce, Recycle, Reduce"],
-        "answer": "Reduce, Reuse, Recycle",
-        "explanation": "The 3Rs help conserve resources and reduce waste."
-      },
-      {
-        "question": "What is upcycling?",
-        "options": ["Throwing away old items", "Turning old items into something useful", "Burning waste", "Burying waste"],
-        "answer": "Turning old items into something useful",
-        "explanation": "Upcycling creatively reuses old materials to create new products."
-      },
-      {
-        "question": "Which bin is for hazardous household waste?",
-        "options": ["Blue", "Green", "Red", "Yellow"],
-        "answer": "Red",
-        "explanation": "Hazardous items like batteries and paints go in red bins."
-      },
-      {
-        "question": "What does 'compostable' mean?",
-        "options": ["Can be recycled", "Can decompose naturally", "Can be burned", "Can be thrown in trash"],
-        "answer": "Can decompose naturally",
-        "explanation": "Compostable materials break down into natural soil nutrients."
-      },
-      {
-        "question": "Which is a sustainable habit?",
-        "options": ["Using single-use plastic", "Walking or cycling", "Buying fast fashion", "Leaving lights on"],
-        "answer": "Walking or cycling",
-        "explanation": "Eco-friendly transport reduces pollution and conserves energy."
-      }
-    ]
-  ],
-  "energy_conservation": [
-    [
-      {
-        "question": "What is an easy way to save electricity at home?",
-        "options": ["Leave lights on", "Turn off unused lights", "Run devices on standby", "Use older bulbs"],
-        "answer": "Turn off unused lights",
-        "explanation": "Turning off lights when not needed saves energy."
-      },
-      {
-        "question": "Which type of light bulb is most energy-efficient?",
-        "options": ["Incandescent", "LED", "Halogen", "Candle bulb"],
-        "answer": "LED",
-        "explanation": "LED bulbs use less energy and last longer than traditional bulbs."
-      },
-      {
-        "question": "What is standby power?",
-        "options": ["Power used by devices when turned off", "Power from solar panels", "Power saved by switching off lights", "Power from batteries"],
-        "answer": "Power used by devices when turned off",
-        "explanation": "Many devices consume electricity even when switched off but plugged in."
-      },
-      {
-        "question": "Which appliance uses the most electricity at home?",
-        "options": ["Refrigerator", "TV", "Laptop", "Toaster"],
-        "answer": "Refrigerator",
-        "explanation": "Refrigerators run 24/7 and consume significant electricity."
-      },
-      {
-        "question": "How can you save energy while cooking?",
-        "options": ["Use smaller pots and lids", "Keep stove on high", "Boil excessive water", "Preheat oven for too long"],
-        "answer": "Use smaller pots and lids",
-        "explanation": "Smaller pots with lids conserve heat and energy."
-      }
-    ],
-    [
-      {
-        "question": "What is renewable energy?",
-        "options": ["Energy that runs out quickly", "Energy from natural sources that replenish", "Energy from coal", "Energy from oil"],
-        "answer": "Energy from natural sources that replenish",
-        "explanation": "Solar, wind, and hydro energy are renewable."
-      },
-      {
-        "question": "Which is a renewable energy source?",
-        "options": ["Coal", "Wind", "Natural Gas", "Oil"],
-        "answer": "Wind",
-        "explanation": "Wind energy can be used continuously without depleting resources."
-      },
-      {
-        "question": "What should you do when leaving a room?",
-        "options": ["Leave lights on", "Turn off lights and devices", "Keep AC on", "Run appliances"],
-        "answer": "Turn off lights and devices",
-        "explanation": "Turning off unused devices reduces energy waste."
-      },
-      {
-        "question": "How can insulation save energy?",
-        "options": ["Keeps heat/cool air inside", "Blocks sunlight", "Consumes energy", "Increases appliance use"],
-        "answer": "Keeps heat/cool air inside",
-        "explanation": "Good insulation reduces heating and cooling energy needs."
-      },
-      {
-        "question": "Which practice reduces water heating energy?",
-        "options": ["Short showers", "Long baths", "Keeping taps running", "Using cold water only for dishes"],
-        "answer": "Short showers",
-        "explanation": "Reducing hot water use saves electricity and energy."
-      }
-    ]
-  ],
-  "tree_planting": [
-    [
-      {
-        "question": "Why are trees important for the environment?",
-        "options": ["Provide oxygen", "Produce waste", "Pollute air", "Reduce soil fertility"],
-        "answer": "Provide oxygen",
-        "explanation": "Trees absorb CO2 and release oxygen."
-      },
-      {
-        "question": "What is deforestation?",
-        "options": ["Planting trees", "Cutting down trees", "Watering plants", "Protecting forests"],
-        "answer": "Cutting down trees",
-        "explanation": "Deforestation is the removal of trees for land or resources."
-      },
-      {
-        "question": "Which tree part absorbs water from soil?",
-        "options": ["Leaves", "Trunk", "Roots", "Branches"],
-        "answer": "Roots",
-        "explanation": "Roots take in water and nutrients from soil."
-      },
-      {
-        "question": "What is reforestation?",
-        "options": ["Cutting trees", "Planting new trees", "Destroying forests", "Burning leaves"],
-        "answer": "Planting new trees",
-        "explanation": "Reforestation restores tree cover to degraded areas."
-      },
-      {
-        "question": "Which animal benefits from trees?",
-        "options": ["Birds", "Fish", "Snakes", "Ants"],
-        "answer": "Birds",
-        "explanation": "Trees provide shelter and food for birds."
-      }
-    ]
-  ],
-  "water_conservation": [
-    [
-      {
-        "question": "Why is water conservation important?",
-        "options": ["Water is unlimited", "Water is scarce", "Water can be made easily", "Water is useless"],
-        "answer": "Water is scarce",
-        "explanation": "Freshwater resources are limited and should be used wisely."
-      },
-      {
-        "question": "How can you save water at home?",
-        "options": ["Leave taps running", "Fix leaks", "Water garden at noon", "Ignore dripping taps"],
-        "answer": "Fix leaks",
-        "explanation": "Repairing leaks reduces water wastage."
-      },
-      {
-        "question": "What is rainwater harvesting?",
-        "options": ["Draining water", "Collecting and storing rainwater", "Polluting water", "Using bottled water"],
-        "answer": "Collecting and storing rainwater",
-        "explanation": "Rainwater can be collected for future use."
-      },
-      {
-        "question": "Which activity wastes the most water?",
-        "options": ["Long showers", "Short showers", "Turning off taps", "Using efficient appliances"],
-        "answer": "Long showers",
-        "explanation": "Shorter showers save water significantly."
-      },
-      {
-        "question": "How to reduce water use in gardening?",
-        "options": ["Water at night or early morning", "Water in the afternoon", "Use sprinklers at noon", "Leave taps open"],
-        "answer": "Water at night or early morning",
-        "explanation": "Watering in cooler times reduces evaporation."
-      }
-    ]
+    {
+      "level": "LEVEL 1 — Basic Waste Identification",
+      "description": "Simple recognition of waste types.",
+      "questions": [
+        {
+          "question": "Which of these is biodegradable waste?",
+          "options": [
+            { "label": "Plastic bottle", "image": "/icons/plastic.png" },
+            { "label": "Banana peel", "image": "/icons/banana.png" },
+            { "label": "Glass", "image": "/icons/glass-jar.png" }
+          ],
+          "answer": "Banana peel"
+        },
+        {
+          "question": "What color bin is used for organic waste?",
+          "options": [
+            { "label": "Green", "image": "/icons/bin.png" },
+            { "label": "Blue", "image": "/icons/recycle-bin.png" },
+            { "label": "Red", "image": "/icons/bin (1).png" }
+          ],
+          "answer": "Green"
+        },
+        {
+          "question": "Which of the following can be recycled?",
+          "options": [
+            { "label": "Paper", "image": "/icons/paper.png" },
+            { "label": "Food", "image": "/icons/food-waste.png" },
+            { "label": "Leaves", "image": "/icons/compost.png" }
+          ],
+          "answer": "Paper"
+        },
+        {
+          "question": "Which waste is harmful if burned?",
+          "options": [
+            { "label": "Plastic", "image": "/icons/plastic.png" },
+            { "label": "Wood", "image": "/icons/wood.png" },
+            { "label": "Banana peel", "image": "/icons/banana.png" }
+          ],
+          "answer": "Plastic"
+        },
+        {
+          "question": "What is the main household waste?",
+          "options": [
+            { "label": "Food remains", "image": "/icons/food-waste.png" },
+            { "label": "Metal", "image": "/icons/scrap.png" },
+            { "label": "Wood", "image": "/icons/wood.png" }
+          ],
+          "answer": "Food remains"
+        },
+        {
+          "question": "Throwing waste in rivers causes…",
+          "options": [
+            { "label": "Clean water", "image": "/icons/glass-of-water.png" },
+            { "label": "Pollution", "image": "/icons/river.png" },
+            { "label": "More fish", "image": "/icons/fish.png" }
+          ],
+          "answer": "Pollution"
+        },
+        {
+          "question": "Which of these is e-waste?",
+          "options": [
+            { "label": "Broken phone", "image": "/icons/smartphone.png" },
+            { "label": "Rotten apple", "image": "/icons/banana.png" },
+            { "label": "Paper bag", "image": "/icons/paper.png" }
+          ],
+          "answer": "Broken phone"
+        },
+        {
+          "question": "What symbol shows a product can be recycled?",
+          "options": [
+            { "label": "Triangle with arrows", "image": "/icons/recycle.png" },
+            { "label": "Star", "image": "/icons/favourites.png" },
+            { "label": "Circle", "image": "/icons/circle-icon.png" }
+          ],
+          "answer": "Triangle with arrows"
+        },
+        {
+          "question": "Waste that can rot naturally is…",
+          "options": [
+            { "label": "Non-biodegradable", "image": "/icons/plastic.png" },
+            { "label": "Biodegradable", "image": "/icons/compost.png" },
+            { "label": "Synthetic", "image": "/icons/synthetic-biology.png" }
+          ],
+          "answer": "Biodegradable"
+        },
+        {
+          "question": "What should you do when a bin is full?",
+          "options": [
+            { "label": "Throw on ground", "image": "/icons/no-littering.png" },
+            { "label": "Inform someone", "image": "/icons/person.png" },
+            { "label": "Burn it", "image": "/icons/fire.png" }
+          ],
+          "answer": "Inform someone"
+        }
+      ]
+    },
+    {
+      "level": "LEVEL 2 — Sorting & Recycling",
+      "description": "Sorting materials and understanding recycling.",
+      "questions": [
+        {
+          "question": "Which material can be recycled many times?",
+          "options": [
+            { "label": "Plastic", "image": "/icons/plastic.png" },
+            { "label": "Glass", "image": "/icons/glass-jar.png" },
+            { "label": "Food", "image": "/icons/food-waste.png" }
+          ],
+          "answer": "Glass"
+        },
+        {
+          "question": "What is composting?",
+          "options": [
+            { "label": "Burning waste", "image": "/icons/fire.png" },
+            { "label": "Turning organic waste into fertilizer", "image": "/icons/compost.png" },
+            { "label": "Freezing waste", "image": "/icons/freezer.png" }
+          ],
+          "answer": "Turning organic waste into fertilizer"
+        },
+        {
+          "question": "Where should used batteries go?",
+          "options": [
+            { "label": "Hazardous bin", "image": "/icons/battery.png" },
+            { "label": "Green bin", "image": "/icons/bin.png" },
+            { "label": "Compost bin", "image": "/icons/compost.png" }
+          ],
+          "answer": "Hazardous bin"
+        },
+        {
+          "question": "First step in recycling paper?",
+          "options": [
+            { "label": "Shredding", "image": "/icons/paper-shredder.png" },
+            { "label": "Painting", "image": "/icons/paper.png" },
+            { "label": "Drying", "image": "/icons/paper-towel.png" }
+          ],
+          "answer": "Shredding"
+        },
+        {
+          "question": "Recycled plastic bottles can make…",
+          "options": [
+            { "label": "Clothes", "image": "/icons/clothes.png" },
+            { "label": "Food", "image": "/icons/food.png" },
+            { "label": "Cement", "image": "/icons/cement.png" }
+          ],
+          "answer": "Clothes"
+        },
+        {
+          "question": "“Reduce” means…",
+          "options": [
+            { "label": "Use less", "image": "/icons/turned-off.png" },
+            { "label": "Use again", "image": "/icons/jar.png" },
+            { "label": "Throw away", "image": "/icons/littering.png" }
+          ],
+          "answer": "Use less"
+        },
+        {
+          "question": "Reusing a glass jar for storage means…",
+          "options": [
+            { "label": "Recycle", "image": "/icons/recycle-bin.png" },
+            { "label": "Reuse", "image": "/icons/jar.png" },
+            { "label": "Reduce", "image": "/icons/turned-off.png" }
+          ],
+          "answer": "Reuse"
+        },
+        {
+          "question": "Which causes chemical pollution?",
+          "options": [
+            { "label": "Plastic bottles", "image": "/icons/plastic.png" },
+            { "label": "Used motor oil", "image": "/icons/engine-oil.png" },
+            { "label": "Paper", "image": "/icons/paper.png" }
+          ],
+          "answer": "Used motor oil"
+        },
+        {
+          "question": "Expired medicines are what type of waste?",
+          "options": [
+            { "label": "Organic", "image": "/icons/banana.png" },
+            { "label": "Hazardous", "image": "/icons/medicine.png" },
+            { "label": "Paper", "image": "/icons/paper.png" }
+          ],
+          "answer": "Hazardous"
+        },
+        {
+          "question": "Recycling helps to…",
+          "options": [
+            { "label": "Save resources", "image": "/icons/recycle.png" },
+            { "label": "Increase waste", "image": "/icons/garbage.png" },
+            { "label": "Pollute water", "image": "/icons/river.png" }
+          ],
+          "answer": "Save resources"
+        }
+      ]
+    },
+    {
+      "level": "LEVEL 3 — Environmental Impact",
+      "description": "Understanding the consequences of waste on the environment.",
+      "questions": [
+        {
+          "question": "Organic waste decomposition releases…",
+          "options": [
+            { "label": "Oxygen", "image": "/icons/oxygen-bubbles.png" },
+            { "label": "Methane", "image": "/icons/burn.png" },
+            { "label": "Nitrogen", "image": "/icons/nitrogen-gas.png" }
+          ],
+          "answer": "Methane"
+        },
+        {
+          "question": "Plastic in oceans harms…",
+          "options": [
+            { "label": "Fish", "image": "/icons/fish.png" },
+            { "label": "Trees", "image": "/icons/wood.png" },
+            { "label": "Rocks", "image": "/icons/stone.png" }
+          ],
+          "answer": "Fish"
+        },
+        {
+          "question": "Burning plastic releases…",
+          "options": [
+            { "label": "Toxic gases", "image": "/icons/polution.png" },
+            { "label": "Clean air", "image": "/icons/fresh_air.png" },
+            { "label": "Water vapor", "image": "/icons/glass-of-water.png" }
+          ],
+          "answer": "Toxic gases"
+        },
+        {
+          "question": "Waste blocking drains causes…",
+          "options": [
+            { "label": "Flooding", "image": "/icons/river.png" },
+            { "label": "Drought", "image": "/icons/dry_land.png" },
+            { "label": "Wind", "image": "/icons/wind.png" }
+          ],
+          "answer": "Flooding"
+        },
+        {
+          "question": "Littering causes…",
+          "options": [
+            { "label": "Diseases", "image": "/icons/garbage.png" },
+            { "label": "Clean air", "image": "/icons/fresh_air.png" },
+            { "label": "Happiness", "image": "/icons/happy_people.png" }
+          ],
+          "answer": "Diseases"
+        },
+        {
+          "question": "Which takes hundreds of years to decompose?",
+          "options": [
+            { "label": "Paper", "image": "/icons/paper.png" },
+            { "label": "Plastic bag", "image": "/icons/plastic.png" },
+            { "label": "Fruit peel", "image": "/icons/banana.png" }
+          ],
+          "answer": "Plastic bag"
+        },
+        {
+          "question": "Open dumps can spread…",
+          "options": [
+            { "label": "Malaria", "image": "/icons/bonfire.png" },
+            { "label": "Flu", "image": "/icons/medicine.png" },
+            { "label": "Cough", "image": "/icons/person.png" }
+          ],
+          "answer": "Malaria"
+        },
+        {
+          "question": "Landfills mainly produce…",
+          "options": [
+            { "label": "Methane gas", "image": "/icons/burn.png" },
+            { "label": "Oxygen", "image": "/icons/oxygen-bubbles.png" },
+            { "label": "Rain", "image": "/icons/water-bottle.png" }
+          ],
+          "answer": "Methane gas"
+        },
+        {
+          "question": "Waste segregation helps…",
+          "options": [
+            { "label": "Recycle efficiently", "image": "/icons/recycle.png" },
+            { "label": "Mix waste", "image": "/icons/garbage.png" },
+            { "label": "Pollute more", "image": "/icons/polution.png" }
+          ],
+          "answer": "Recycle efficiently"
+        },
+        {
+          "question": "Poor waste management causes…",
+          "options": [
+            { "label": "Environmental pollution", "image": "/icons/polution.png" },
+            { "label": "Forest growth", "image": "/icons/wood.png" },
+            { "label": "Clean cities", "image": "/icons/clean_city.png" }
+          ],
+          "answer": "Environmental pollution"
+        }
+      ]
+    },
+  {
+  "level": "LEVEL 4 — Innovation & Green Practices",
+  "description": "Innovation in waste management and green practices.",
+  "questions": [
+    {
+      "question": "Technology converting waste to energy is…",
+      "options": [
+        { "label": "Waste-to-energy plant", "image": "/icons/energy-consumption.png" },
+        { "label": "Compost pit", "image": "/icons/compost.png" },
+        { "label": "Solar panel", "image": "/icons/solar_panel.png" }
+      ],
+      "answer": "Waste-to-energy plant"
+    },
+    {
+      "question": "“Upcycling” means…",
+      "options": [
+        { "label": "Making better products from waste", "image": "/icons/clothes.png" },
+        { "label": "Burning waste", "image": "/icons/fire.png" },
+        { "label": "Throwing waste", "image": "/icons/garbage.png" }
+      ],
+      "answer": "Making better products from waste"
+    },
+    {
+      "question": "Waste that produces biogas is…",
+      "options": [
+        { "label": "Organic waste", "image": "/icons/compost.png" },
+        { "label": "Plastic", "image": "/icons/plastic.png" },
+        { "label": "Metal", "image": "/icons/scrap.png" }
+      ],
+      "answer": "Organic waste"
+    },
+    {
+      "question": "Technology helps waste management via…",
+      "options": [
+        { "label": "Tracking apps", "image": "/icons/smartphone.png" },
+        { "label": "Faster burning", "image": "/icons/fire.png" },
+        { "label": "Ignoring waste", "image": "/icons/garbage.png" }
+      ],
+      "answer": "Tracking apps"
+    },
+    {
+      "question": "Smart bins can…",
+      "options": [
+        { "label": "Notify when full", "image": "/icons/bin.png" },
+        { "label": "Burn waste", "image": "/icons/fire.png" },
+        { "label": "Sort clothes", "image": "/icons/clothes.png" }
+      ],
+      "answer": "Notify when full"
+    },
+    {
+      "question": "A renewable energy source is…",
+      "options": [
+        { "label": "Solar", "image": "/icons/solar_panel.png" },
+        { "label": "Coal", "image": "/icons/cement.png" },
+        { "label": "Plastic", "image": "/icons/plastic.png" }
+      ],
+      "answer": "Solar"
+    },
+    {
+      "question": "Eco-bricks are made from…",
+      "options": [
+        { "label": "Plastic bottles filled with waste", "image": "/icons/plastic.png" },
+        { "label": "Stones", "image": "/icons/stone.png" },
+        { "label": "Sand", "image": "/icons/cement.png" }
+      ],
+      "answer": "Plastic bottles filled with waste"
+    },
+    {
+      "question": "Zero-waste campaigns encourage…",
+      "options": [
+        { "label": "Recycling", "image": "/icons/recycle.png" },
+        { "label": "Burning", "image": "/icons/fire.png" },
+        { "label": "Dumping", "image": "/icons/garbage.png" }
+      ],
+      "answer": "Recycling"
+    },
+    {
+      "question": "Farmers reuse waste via…",
+      "options": [
+        { "label": "Composting", "image": "/icons/compost.png" },
+        { "label": "Incineration", "image": "/icons/fire.png" },
+        { "label": "Landfilling", "image": "/icons/garbage.png" }
+      ],
+      "answer": "Composting"
+    },
+    {
+      "question": "Best eco-friendly packaging is…",
+      "options": [
+        { "label": "Biodegradable paper", "image": "/icons/paper.png" },
+        { "label": "Plastic", "image": "/icons/plastic.png" },
+        { "label": "Glass", "image": "/icons/glass-jar.png" }
+      ],
+      "answer": "Biodegradable paper"
+    }
+  ]
+},
+{
+  "level": "LEVEL 5 — Policy & Critical Thinking",
+  "description": "Understanding policies, sustainability, and critical thinking in waste management.",
+  "questions": [
+    {
+      "question": "Global policy reducing plastic pollution is…",
+      "options": [
+        { "label": "Paris Agreement", "image": "/icons/paris_agreement.jpg" },
+        { "label": "Montreal Protocol", "image": "/icons/montreal_protocol.jpg" },
+        { "label": "Kyoto Charter", "image": "/icons/kyoto_charter.jpg" }
+      ],
+      "answer": "Paris Agreement"
+    },
+    {
+      "question": "A city should manage waste by…",
+      "options": [
+        { "label": "Promoting recycling and composting", "image": "/icons/recycle-bin.png" },
+        { "label": "Burning all waste", "image": "/icons/fire.png" },
+        { "label": "Ignoring it", "image": "/icons/garbage.png" }
+      ],
+      "answer": "Promoting recyclin.g and composting"
+    },
+    {
+      "question": "“Extended Producer Responsibility” means…",
+      "options": [
+        { "label": "Producers take back their waste", "image": "/icons/factory_recycling.jpg" },
+        { "label": "Consumers recycle", "image": "/icons/person.png" },
+        { "label": "Government pays all", "image": "/icons/government_building.jpg" }
+      ],
+      "answer": "Producers take back their waste"
+    },
+    {
+      "question": "A circular economy is…",
+      "options": [
+        { "label": "Reusing & recycling continuously", "image": "/icons/circular_economy.jpg" },
+        { "label": "Using once & dumping", "image": "/icons/open_dump.jpg" },
+        { "label": "Burning waste", "image": "/icons/fire.png" }
+      ],
+      "answer": "Reusing & recycling continuously"
+    },
+    {
+      "question": "Schools can reduce waste by…",
+      "options": [
+        { "label": "Using digital assignments", "image": "/icons/digital_classroom.jpg" },
+        { "label": "Burning paper", "image": "/icons/fire.png" },
+        { "label": "Using plastic wraps", "image": "/icons/plastic.png" }
+      ],
+      "answer": "Using digital assignments"
+    },
+    {
+      "question": "Most challenging global waste type is…",
+      "options": [
+        { "label": "E-waste", "image": "/icons/smartphone.png" },
+        { "label": "Food waste", "image": "/icons/food.png" },
+        { "label": "Organic waste", "image": "/icons/compost.png" }
+      ],
+      "answer": "E-waste"
+    },
+    {
+      "question": "Governments invest in waste management to…",
+      "options": [
+        { "label": "Protect health", "image": "/icons/public_health.jpg" },
+        { "label": "Pollute faster", "image": "/icons/polution.png" },
+        { "label": "Spend money", "image": "/icons/money_bag.jpg" }
+      ],
+      "answer": "Protect health"
+    },
+    {
+      "question": "Country close to zero landfill waste is…",
+      "options": [
+        { "label": "Sweden", "image": "/icons/sweden_recycling.jpg" },
+        { "label": "Kenya", "image": "/icons/kenya_city.jpg" },
+        { "label": "India", "image": "/icons/india_city.jpg" }
+      ],
+      "answer": "Sweden"
+    },
+    {
+      "question": "A sustainable waste practice is…",
+      "options": [
+        { "label": "Waste segregation", "image": "/icons/segregated_bins.jpg" },
+        { "label": "Open dumping", "image": "/icons/open_dump.jpg" },
+        { "label": "Burning", "image": "/icons/fire.png" }
+      ],
+      "answer": "Waste segregation"
+    },
+    {
+      "question": "Future waste solution is…",
+      "options": [
+        { "label": "Reducing production", "image": "/icons/clean_future_city.jpg" },
+        { "label": "Using more landfills", "image": "/icons/landfill.jpg" },
+        { "label": "Burning all", "image": "/icons/fire.png" }
+      ],
+      "answer": "Reducing production"
+    }
   ]
 }
+
+
+    
+  ]
+}
+
