@@ -7,44 +7,44 @@
         {
           "question": "Which of these is biodegradable waste?",
           "options": [
-            { "label": "Plastic bottle", "image": "/icons/plastic.png" },
-            { "label": "Banana peel", "image": "/icons/banana.png" },
-            { "label": "Glass", "image": "/icons/glass-jar.png" }
+            { "label": "Plastic bottle", "image": "/icons/plastic_bottle.png" },
+            { "label": "Banana peel", "image": "/icons/banana_peel.png" },
+            { "label": "Glass", "image": "/icons/glass.png" }
           ],
           "answer": "Banana peel"
         },
         {
           "question": "What color bin is used for organic waste?",
           "options": [
-            { "label": "Green", "image": "/icons/bin.png" },
-            { "label": "Blue", "image": "/icons/recycle-bin.png" },
-            { "label": "Red", "image": "/icons/bin (1).png" }
+            { "label": "Green", "image": "/icons/green_bin.png" },
+            { "label": "Blue", "image": "/icons/blue_bin.png" },
+            { "label": "Red", "image": "/icons/red_bin.png" }
           ],
           "answer": "Green"
         },
         {
           "question": "Which of the following can be recycled?",
           "options": [
-            { "label": "Paper", "image": "/icons/paper.png" },
-            { "label": "Food", "image": "/icons/food-waste.png" },
-            { "label": "Leaves", "image": "/icons/compost.png" }
+            { "label": "Paper", "image": "/icons/paper_stack.png" },
+            { "label": "Food", "image": "/icons/food_scraps.png" },
+            { "label": "Leaves", "image": "/icons/leaves.png" }
           ],
           "answer": "Paper"
         },
         {
           "question": "Which waste is harmful if burned?",
           "options": [
-            { "label": "Plastic", "image": "/icons/plastic.png" },
-            { "label": "Wood", "image": "/icons/wood.png" },
-            { "label": "Banana peel", "image": "/icons/banana.png" }
+            { "label": "Plastic", "image": "/icons/plastic_burning.png" },
+            { "label": "Wood", "image": "/icons/wood_burning.png" },
+            { "label": "Banana peel", "image": "/icons/banana_peel.png" }
           ],
           "answer": "Plastic"
         },
         {
           "question": "What is the main household waste?",
           "options": [
-            { "label": "Food remains", "image": "/icons/food-waste.png" },
-            { "label": "Metal", "image": "/icons/scrap.png" },
+            { "label": "Food remains", "image": "/icons/food_waste.png" },
+            { "label": "Metal", "image": "/icons/metal_scraps.png" },
             { "label": "Wood", "image": "/icons/wood.png" }
           ],
           "answer": "Food remains"
@@ -52,8 +52,8 @@
         {
           "question": "Throwing waste in rivers causes…",
           "options": [
-            { "label": "Clean water", "image": "/icons/glass-of-water.png" },
-            { "label": "Pollution", "image": "/icons/river.png" },
+            { "label": "Clean water", "image": "/icons/clean_river.png" },
+            { "label": "Pollution", "image": "/icons/polluted_river.png" },
             { "label": "More fish", "image": "/icons/fish.png" }
           ],
           "answer": "Pollution"
@@ -61,36 +61,36 @@
         {
           "question": "Which of these is e-waste?",
           "options": [
-            { "label": "Broken phone", "image": "/icons/smartphone.png" },
-            { "label": "Rotten apple", "image": "/icons/banana.png" },
-            { "label": "Paper bag", "image": "/icons/paper.png" }
+            { "label": "Broken phone", "image": "/icons/broken_phone.png" },
+            { "label": "Rotten apple", "image": "/icons/rotten_apple.png" },
+            { "label": "Paper bag", "image": "/icons/paper_bag.png" }
           ],
           "answer": "Broken phone"
         },
         {
           "question": "What symbol shows a product can be recycled?",
           "options": [
-            { "label": "Triangle with arrows", "image": "/icons/recycle.png" },
-            { "label": "Star", "image": "/icons/favourites.png" },
-            { "label": "Circle", "image": "/icons/circle-icon.png" }
+            { "label": "Triangle with arrows", "image": "/icons/recycle_symbol.png" },
+            { "label": "Star", "image": "/icons/star_icon.png" },
+            { "label": "Circle", "image": "/icons/circle_icon.png" }
           ],
           "answer": "Triangle with arrows"
         },
         {
           "question": "Waste that can rot naturally is…",
           "options": [
-            { "label": "Non-biodegradable", "image": "/icons/plastic.png" },
+            { "label": "Non-biodegradable", "image": "/icons/plastic_waste.png" },
             { "label": "Biodegradable", "image": "/icons/compost.png" },
-            { "label": "Synthetic", "image": "/icons/synthetic-biology.png" }
+            { "label": "Synthetic", "image": "/icons/synthetic_material.png" }
           ],
           "answer": "Biodegradable"
         },
         {
           "question": "What should you do when a bin is full?",
           "options": [
-            { "label": "Throw on ground", "image": "/icons/no-littering.png" },
-            { "label": "Inform someone", "image": "/icons/person.png" },
-            { "label": "Burn it", "image": "/icons/fire.png" }
+            { "label": "Throw on ground", "image": "/icons/littering.png" },
+            { "label": "Inform someone", "image": "/icons/person_reporting.png" },
+            { "label": "Burn it", "image": "/icons/waste_burning.png" }
           ],
           "answer": "Inform someone"
         }
@@ -103,17 +103,17 @@
         {
           "question": "Which material can be recycled many times?",
           "options": [
-            { "label": "Plastic", "image": "/icons/plastic.png" },
-            { "label": "Glass", "image": "/icons/glass-jar.png" },
-            { "label": "Food", "image": "/icons/food-waste.png" }
+            { "label": "Plastic", "image": "/icons/plastic_bottle.png" },
+            { "label": "Glass", "image": "/icons/glass_bottle.png" },
+            { "label": "Food", "image": "/icons/food.png" }
           ],
           "answer": "Glass"
         },
         {
           "question": "What is composting?",
           "options": [
-            { "label": "Burning waste", "image": "/icons/fire.png" },
-            { "label": "Turning organic waste into fertilizer", "image": "/icons/compost.png" },
+            { "label": "Burning waste", "image": "/icons/waste_burning.png" },
+            { "label": "Turning organic waste into fertilizer", "image": "/icons/compost_pile.png" },
             { "label": "Freezing waste", "image": "/icons/freezer.png" }
           ],
           "answer": "Turning organic waste into fertilizer"
@@ -121,35 +121,35 @@
         {
           "question": "Where should used batteries go?",
           "options": [
-            { "label": "Hazardous bin", "image": "/icons/battery.png" },
-            { "label": "Green bin", "image": "/icons/bin.png" },
-            { "label": "Compost bin", "image": "/icons/compost.png" }
+            { "label": "Hazardous bin", "image": "/icons/battery_bin.png" },
+            { "label": "Green bin", "image": "/icons/green_bin.png" },
+            { "label": "Compost bin", "image": "/icons/compost_bin.png" }
           ],
           "answer": "Hazardous bin"
         },
         {
           "question": "First step in recycling paper?",
           "options": [
-            { "label": "Shredding", "image": "/icons/paper-shredder.png" },
-            { "label": "Painting", "image": "/icons/paper.png" },
-            { "label": "Drying", "image": "/icons/paper-towel.png" }
+            { "label": "Shredding", "image": "/icons/paper_shredding.png" },
+            { "label": "Painting", "image": "/icons/paper_painting.png" },
+            { "label": "Drying", "image": "/icons/paper_drying.png" }
           ],
           "answer": "Shredding"
         },
         {
           "question": "Recycled plastic bottles can make…",
           "options": [
-            { "label": "Clothes", "image": "/icons/clothes.png" },
-            { "label": "Food", "image": "/icons/food.png" },
-            { "label": "Cement", "image": "/icons/cement.png" }
+            { "label": "Clothes", "image": "/icons/plastic_clothes.png" },
+            { "label": "Food", "image": "/icons/food_plate.png" },
+            { "label": "Cement", "image": "/icons/cement_bag.png" }
           ],
           "answer": "Clothes"
         },
         {
           "question": "“Reduce” means…",
           "options": [
-            { "label": "Use less", "image": "/icons/turned-off.png" },
-            { "label": "Use again", "image": "/icons/jar.png" },
+            { "label": "Use less", "image": "/icons/turning_off_light.png" },
+            { "label": "Use again", "image": "/icons/reuse_jar.png" },
             { "label": "Throw away", "image": "/icons/littering.png" }
           ],
           "answer": "Use less"
@@ -157,36 +157,36 @@
         {
           "question": "Reusing a glass jar for storage means…",
           "options": [
-            { "label": "Recycle", "image": "/icons/recycle-bin.png" },
-            { "label": "Reuse", "image": "/icons/jar.png" },
-            { "label": "Reduce", "image": "/icons/turned-off.png" }
+            { "label": "Recycle", "image": "/icons/recycle_bin.png" },
+            { "label": "Reuse", "image": "/icons/glass_jar_storage.png" },
+            { "label": "Reduce", "image": "/icons/reduce_energy.png" }
           ],
           "answer": "Reuse"
         },
         {
           "question": "Which causes chemical pollution?",
           "options": [
-            { "label": "Plastic bottles", "image": "/icons/plastic.png" },
-            { "label": "Used motor oil", "image": "/icons/engine-oil.png" },
-            { "label": "Paper", "image": "/icons/paper.png" }
+            { "label": "Plastic bottles", "image": "/icons/plastic_bottles.png" },
+            { "label": "Used motor oil", "image": "/icons/motor_oil_spill.png" },
+            { "label": "Paper", "image": "/icons/paper_stack.png" }
           ],
           "answer": "Used motor oil"
         },
         {
           "question": "Expired medicines are what type of waste?",
           "options": [
-            { "label": "Organic", "image": "/icons/banana.png" },
-            { "label": "Hazardous", "image": "/icons/medicine.png" },
-            { "label": "Paper", "image": "/icons/paper.png" }
+            { "label": "Organic", "image": "/icons/fruit_peel.png" },
+            { "label": "Hazardous", "image": "/icons/expired_drugs.png" },
+            { "label": "Paper", "image": "/icons/paper_stack.png" }
           ],
           "answer": "Hazardous"
         },
         {
           "question": "Recycling helps to…",
           "options": [
-            { "label": "Save resources", "image": "/icons/recycle.png" },
-            { "label": "Increase waste", "image": "/icons/garbage.png" },
-            { "label": "Pollute water", "image": "/icons/river.png" }
+            { "label": "Save resources", "image": "/icons/recycling_factory.png" },
+            { "label": "Increase waste", "image": "/icons/open_dump.png" },
+            { "label": "Pollute water", "image": "/icons/polluted_river.png" }
           ],
           "answer": "Save resources"
         }
@@ -199,34 +199,34 @@
         {
           "question": "Organic waste decomposition releases…",
           "options": [
-            { "label": "Oxygen", "image": "/icons/oxygen-bubbles.png" },
-            { "label": "Methane", "image": "/icons/burn.png" },
-            { "label": "Nitrogen", "image": "/icons/nitrogen-gas.png" }
+            { "label": "Oxygen", "image": "/icons/oxygen_bubbles.png" },
+            { "label": "Methane", "image": "/icons/methane_gas.png" },
+            { "label": "Nitrogen", "image": "/icons/nitrogen_gas.png" }
           ],
           "answer": "Methane"
         },
         {
           "question": "Plastic in oceans harms…",
           "options": [
-            { "label": "Fish", "image": "/icons/fish.png" },
-            { "label": "Trees", "image": "/icons/wood.png" },
-            { "label": "Rocks", "image": "/icons/stone.png" }
+            { "label": "Fish", "image": "/icons/fish_plastic.png" },
+            { "label": "Trees", "image": "/icons/forest.png" },
+            { "label": "Rocks", "image": "/icons/rocks.png" }
           ],
           "answer": "Fish"
         },
         {
           "question": "Burning plastic releases…",
           "options": [
-            { "label": "Toxic gases", "image": "/icons/polution.png" },
+            { "label": "Toxic gases", "image": "/icons/smoke_pollution.png" },
             { "label": "Clean air", "image": "/icons/fresh_air.png" },
-            { "label": "Water vapor", "image": "/icons/glass-of-water.png" }
+            { "label": "Water vapor", "image": "/icons/steam.png" }
           ],
           "answer": "Toxic gases"
         },
         {
           "question": "Waste blocking drains causes…",
           "options": [
-            { "label": "Flooding", "image": "/icons/river.png" },
+            { "label": "Flooding", "image": "/icons/flooded_street.png" },
             { "label": "Drought", "image": "/icons/dry_land.png" },
             { "label": "Wind", "image": "/icons/wind.png" }
           ],
@@ -235,8 +235,8 @@
         {
           "question": "Littering causes…",
           "options": [
-            { "label": "Diseases", "image": "/icons/garbage.png" },
-            { "label": "Clean air", "image": "/icons/fresh_air.png" },
+            { "label": "Diseases", "image": "/icons/dirty_street.png" },
+            { "label": "Clean air", "image": "/icons/fresh_park.png" },
             { "label": "Happiness", "image": "/icons/happy_people.png" }
           ],
           "answer": "Diseases"
@@ -244,245 +244,241 @@
         {
           "question": "Which takes hundreds of years to decompose?",
           "options": [
-            { "label": "Paper", "image": "/icons/paper.png" },
-            { "label": "Plastic bag", "image": "/icons/plastic.png" },
-            { "label": "Fruit peel", "image": "/icons/banana.png" }
+            { "label": "Paper", "image": "/icons/paper_stack.png" },
+            { "label": "Plastic bag", "image": "/icons/plastic_bag.png" },
+            { "label": "Fruit peel", "image": "/icons/fruit_peel.png" }
           ],
           "answer": "Plastic bag"
         },
         {
           "question": "Open dumps can spread…",
           "options": [
-            { "label": "Malaria", "image": "/icons/bonfire.png" },
-            { "label": "Flu", "image": "/icons/medicine.png" },
-            { "label": "Cough", "image": "/icons/person.png" }
+            { "label": "Malaria", "image": "/icons/mosquito_dump.png" },
+            { "label": "Flu", "image": "/icons/flu_icon.png" },
+            { "label": "Cough", "image": "/icons/person_coughing.png" }
           ],
           "answer": "Malaria"
         },
         {
           "question": "Landfills mainly produce…",
           "options": [
-            { "label": "Methane gas", "image": "/icons/burn.png" },
-            { "label": "Oxygen", "image": "/icons/oxygen-bubbles.png" },
-            { "label": "Rain", "image": "/icons/water-bottle.png" }
+            { "label": "Methane gas", "image": "/icons/landfill_gas.png" },
+            { "label": "Oxygen", "image": "/icons/oxygen_bubbles.png" },
+            { "label": "Rain", "image": "/icons/rain.png" }
           ],
           "answer": "Methane gas"
         },
         {
           "question": "Waste segregation helps…",
           "options": [
-            { "label": "Recycle efficiently", "image": "/icons/recycle.png" },
-            { "label": "Mix waste", "image": "/icons/garbage.png" },
-            { "label": "Pollute more", "image": "/icons/polution.png" }
+            { "label": "Recycle efficiently", "image": "/icons/segregated_bins.png" },
+            { "label": "Mix waste", "image": "/icons/mixed_waste.png" },
+            { "label": "Pollute more", "image": "/icons/pollution.png" }
           ],
           "answer": "Recycle efficiently"
         },
         {
           "question": "Poor waste management causes…",
           "options": [
-            { "label": "Environmental pollution", "image": "/icons/polution.png" },
-            { "label": "Forest growth", "image": "/icons/wood.png" },
+            { "label": "Environmental pollution", "image": "/icons/polluted_city.png" },
+            { "label": "Forest growth", "image": "/icons/forest2.png" },
             { "label": "Clean cities", "image": "/icons/clean_city.png" }
           ],
           "answer": "Environmental pollution"
         }
       ]
     },
-  {
-  "level": "LEVEL 4 — Innovation & Green Practices",
-  "description": "Innovation in waste management and green practices.",
-  "questions": [
     {
-      "question": "Technology converting waste to energy is…",
-      "options": [
-        { "label": "Waste-to-energy plant", "image": "/icons/energy-consumption.png" },
-        { "label": "Compost pit", "image": "/icons/compost.png" },
-        { "label": "Solar panel", "image": "/icons/solar_panel.png" }
-      ],
-      "answer": "Waste-to-energy plant"
+      "level": "LEVEL 4 — Advanced Recycling & Reuse",
+      "description": "Deep understanding of recycling, reusing, and reducing waste.",
+      "questions": [
+        {
+          "question": "Upcycling means…",
+          "options": [
+            { "label": "Turning waste into new product", "image": "/icons/upcycling.png" },
+            { "label": "Throwing away waste", "image": "/icons/littering.png" },
+            { "label": "Burning waste", "image": "/icons/waste_burning.png" }
+          ],
+          "answer": "Turning waste into new product"
+        },
+        {
+          "question": "Which is a renewable material?",
+          "options": [
+            { "label": "Wood", "image": "/icons/wood.png" },
+            { "label": "Plastic", "image": "/icons/plastic_bottle.png" },
+            { "label": "Glass", "image": "/icons/glass_bottle.png" }
+          ],
+          "answer": "Wood"
+        },
+        {
+          "question": "E-waste recycling recovers…",
+          "options": [
+            { "label": "Metals", "image": "/icons/metals.png" },
+            { "label": "Water", "image": "/icons/water_drop.png" },
+            { "label": "Soil", "image": "/icons/soil.png" }
+          ],
+          "answer": "Metals"
+        },
+        {
+          "question": "Paper can be recycled into…",
+          "options": [
+            { "label": "New paper", "image": "/icons/recycled_paper.png" },
+            { "label": "Plastic", "image": "/icons/plastic_bottle.png" },
+            { "label": "Metal", "image": "/icons/metal_scraps.png" }
+          ],
+          "answer": "New paper"
+        },
+        {
+          "question": "Recycling aluminum saves…",
+          "options": [
+            { "label": "Energy", "image": "/icons/energy_saving.png" },
+            { "label": "Water", "image": "/icons/water_drop.png" },
+            { "label": "Land", "image": "/icons/soil.png" }
+          ],
+          "answer": "Energy"
+        },
+        {
+          "question": "Which is biodegradable plastic?",
+          "options": [
+            { "label": "PLA", "image": "/icons/pla.png" },
+            { "label": "PET", "image": "/icons/pet.png" },
+            { "label": "PVC", "image": "/icons/pvc.png" }
+          ],
+          "answer": "PLA"
+        },
+        {
+          "question": "Reusable bags help to…",
+          "options": [
+            { "label": "Reduce plastic use", "image": "/icons/reusable_bag.png" },
+            { "label": "Increase plastic waste", "image": "/icons/plastic_bag.png" },
+            { "label": "Recycle metal", "image": "/icons/metals.png" }
+          ],
+          "answer": "Reduce plastic use"
+        },
+        {
+          "question": "Industrial composting handles…",
+          "options": [
+            { "label": "Organic waste", "image": "/icons/compost_pile.png" },
+            { "label": "Plastic", "image": "/icons/plastic_bottle.png" },
+            { "label": "Glass", "image": "/icons/glass_bottle.png" }
+          ],
+          "answer": "Organic waste"
+        },
+        {
+          "question": "Recycling centers accept…",
+          "options": [
+            { "label": "Glass, paper, metal", "image": "/icons/recycling_center.png" },
+            { "label": "Food only", "image": "/icons/food_scraps.png" },
+            { "label": "Wood only", "image": "/icons/wood.png" }
+          ],
+          "answer": "Glass, paper, metal"
+        },
+        {
+          "question": "Circular economy aims to…",
+          "options": [
+            { "label": "Minimize waste", "image": "/icons/circular_economy.png" },
+            { "label": "Increase landfills", "image": "/icons/open_dump.png" },
+            { "label": "Burn all waste", "image": "/icons/waste_burning.png" }
+          ],
+          "answer": "Minimize waste"
+        }
+      ]
     },
     {
-      "question": "“Upcycling” means…",
-      "options": [
-        { "label": "Making better products from waste", "image": "/icons/clothes.png" },
-        { "label": "Burning waste", "image": "/icons/fire.png" },
-        { "label": "Throwing waste", "image": "/icons/garbage.png" }
-      ],
-      "answer": "Making better products from waste"
-    },
-    {
-      "question": "Waste that produces biogas is…",
-      "options": [
-        { "label": "Organic waste", "image": "/icons/compost.png" },
-        { "label": "Plastic", "image": "/icons/plastic.png" },
-        { "label": "Metal", "image": "/icons/scrap.png" }
-      ],
-      "answer": "Organic waste"
-    },
-    {
-      "question": "Technology helps waste management via…",
-      "options": [
-        { "label": "Tracking apps", "image": "/icons/smartphone.png" },
-        { "label": "Faster burning", "image": "/icons/fire.png" },
-        { "label": "Ignoring waste", "image": "/icons/garbage.png" }
-      ],
-      "answer": "Tracking apps"
-    },
-    {
-      "question": "Smart bins can…",
-      "options": [
-        { "label": "Notify when full", "image": "/icons/bin.png" },
-        { "label": "Burn waste", "image": "/icons/fire.png" },
-        { "label": "Sort clothes", "image": "/icons/clothes.png" }
-      ],
-      "answer": "Notify when full"
-    },
-    {
-      "question": "A renewable energy source is…",
-      "options": [
-        { "label": "Solar", "image": "/icons/solar_panel.png" },
-        { "label": "Coal", "image": "/icons/cement.png" },
-        { "label": "Plastic", "image": "/icons/plastic.png" }
-      ],
-      "answer": "Solar"
-    },
-    {
-      "question": "Eco-bricks are made from…",
-      "options": [
-        { "label": "Plastic bottles filled with waste", "image": "/icons/plastic.png" },
-        { "label": "Stones", "image": "/icons/stone.png" },
-        { "label": "Sand", "image": "/icons/cement.png" }
-      ],
-      "answer": "Plastic bottles filled with waste"
-    },
-    {
-      "question": "Zero-waste campaigns encourage…",
-      "options": [
-        { "label": "Recycling", "image": "/icons/recycle.png" },
-        { "label": "Burning", "image": "/icons/fire.png" },
-        { "label": "Dumping", "image": "/icons/garbage.png" }
-      ],
-      "answer": "Recycling"
-    },
-    {
-      "question": "Farmers reuse waste via…",
-      "options": [
-        { "label": "Composting", "image": "/icons/compost.png" },
-        { "label": "Incineration", "image": "/icons/fire.png" },
-        { "label": "Landfilling", "image": "/icons/garbage.png" }
-      ],
-      "answer": "Composting"
-    },
-    {
-      "question": "Best eco-friendly packaging is…",
-      "options": [
-        { "label": "Biodegradable paper", "image": "/icons/paper.png" },
-        { "label": "Plastic", "image": "/icons/plastic.png" },
-        { "label": "Glass", "image": "/icons/glass-jar.png" }
-      ],
-      "answer": "Biodegradable paper"
-    }
-  ]
-},
-{
-  "level": "LEVEL 5 — Policy & Critical Thinking",
-  "description": "Understanding policies, sustainability, and critical thinking in waste management.",
-  "questions": [
-    {
-      "question": "Global policy reducing plastic pollution is…",
-      "options": [
-        { "label": "Paris Agreement", "image": "/icons/paris_agreement.jpg" },
-        { "label": "Montreal Protocol", "image": "/icons/montreal_protocol.jpg" },
-        { "label": "Kyoto Charter", "image": "/icons/kyoto_charter.jpg" }
-      ],
-      "answer": "Paris Agreement"
-    },
-    {
-      "question": "A city should manage waste by…",
-      "options": [
-        { "label": "Promoting recycling and composting", "image": "/icons/recycle-bin.png" },
-        { "label": "Burning all waste", "image": "/icons/fire.png" },
-        { "label": "Ignoring it", "image": "/icons/garbage.png" }
-      ],
-      "answer": "Promoting recyclin.g and composting"
-    },
-    {
-      "question": "“Extended Producer Responsibility” means…",
-      "options": [
-        { "label": "Producers take back their waste", "image": "/icons/factory_recycling.jpg" },
-        { "label": "Consumers recycle", "image": "/icons/person.png" },
-        { "label": "Government pays all", "image": "/icons/government_building.jpg" }
-      ],
-      "answer": "Producers take back their waste"
-    },
-    {
-      "question": "A circular economy is…",
-      "options": [
-        { "label": "Reusing & recycling continuously", "image": "/icons/circular_economy.jpg" },
-        { "label": "Using once & dumping", "image": "/icons/open_dump.jpg" },
-        { "label": "Burning waste", "image": "/icons/fire.png" }
-      ],
-      "answer": "Reusing & recycling continuously"
-    },
-    {
-      "question": "Schools can reduce waste by…",
-      "options": [
-        { "label": "Using digital assignments", "image": "/icons/digital_classroom.jpg" },
-        { "label": "Burning paper", "image": "/icons/fire.png" },
-        { "label": "Using plastic wraps", "image": "/icons/plastic.png" }
-      ],
-      "answer": "Using digital assignments"
-    },
-    {
-      "question": "Most challenging global waste type is…",
-      "options": [
-        { "label": "E-waste", "image": "/icons/smartphone.png" },
-        { "label": "Food waste", "image": "/icons/food.png" },
-        { "label": "Organic waste", "image": "/icons/compost.png" }
-      ],
-      "answer": "E-waste"
-    },
-    {
-      "question": "Governments invest in waste management to…",
-      "options": [
-        { "label": "Protect health", "image": "/icons/public_health.jpg" },
-        { "label": "Pollute faster", "image": "/icons/polution.png" },
-        { "label": "Spend money", "image": "/icons/money_bag.jpg" }
-      ],
-      "answer": "Protect health"
-    },
-    {
-      "question": "Country close to zero landfill waste is…",
-      "options": [
-        { "label": "Sweden", "image": "/icons/sweden_recycling.jpg" },
-        { "label": "Kenya", "image": "/icons/kenya_city.jpg" },
-        { "label": "India", "image": "/icons/india_city.jpg" }
-      ],
-      "answer": "Sweden"
-    },
-    {
-      "question": "A sustainable waste practice is…",
-      "options": [
-        { "label": "Waste segregation", "image": "/icons/segregated_bins.jpg" },
-        { "label": "Open dumping", "image": "/icons/open_dump.jpg" },
-        { "label": "Burning", "image": "/icons/fire.png" }
-      ],
-      "answer": "Waste segregation"
-    },
-    {
-      "question": "Future waste solution is…",
-      "options": [
-        { "label": "Reducing production", "image": "/icons/clean_future_city.jpg" },
-        { "label": "Using more landfills", "image": "/icons/landfill.jpg" },
-        { "label": "Burning all", "image": "/icons/fire.png" }
-      ],
-      "answer": "Reducing production"
+      "level": "LEVEL 5 — Expert Level Waste Management",
+      "description": "Comprehensive knowledge of waste management strategies.",
+      "questions": [
+        {
+          "question": "Hazardous waste requires…",
+          "options": [
+            { "label": "Special disposal", "image": "/icons/hazardous_disposal.png" },
+            { "label": "Ordinary bin", "image": "/icons/blue_bin.png" },
+            { "label": "Composting", "image": "/icons/compost_pile.png" }
+          ],
+          "answer": "Special disposal"
+        },
+        {
+          "question": "Zero waste principle encourages…",
+          "options": [
+            { "label": "No waste creation", "image": "/icons/zero_waste.png" },
+            { "label": "Burning waste", "image": "/icons/waste_burning.png" },
+            { "label": "Landfills", "image": "/icons/open_dump.png" }
+          ],
+          "answer": "No waste creation"
+        },
+        {
+          "question": "Life cycle assessment helps…",
+          "options": [
+            { "label": "Analyze environmental impact", "image": "/icons/life_cycle.png" },
+            { "label": "Produce more waste", "image": "/icons/open_dump.png" },
+            { "label": "Recycle less", "image": "/icons/recycle_bin.png" }
+          ],
+          "answer": "Analyze environmental impact"
+        },
+        {
+          "question": "Waste-to-energy plants convert…",
+          "options": [
+            { "label": "Waste into electricity", "image": "/icons/waste_energy.png" },
+            { "label": "Energy into waste", "image": "/icons/energy.png" },
+            { "label": "Plastic into paper", "image": "/icons/plastic_bottle.png" }
+          ],
+          "answer": "Waste into electricity"
+        },
+        {
+          "question": "Illegal dumping pollutes…",
+          "options": [
+            { "label": "Soil, water, air", "image": "/icons/pollution.png" },
+            { "label": "Only air", "image": "/icons/air_pollution.png" },
+            { "label": "Only soil", "image": "/icons/soil.png" }
+          ],
+          "answer": "Soil, water, air"
+        },
+        {
+          "question": "Biodegradable packaging reduces…",
+          "options": [
+            { "label": "Plastic pollution", "image": "/icons/biodegradable_packaging.png" },
+            { "label": "Paper recycling", "image": "/icons/paper_recycling.png" },
+            { "label": "Metal use", "image": "/icons/metals.png" }
+          ],
+          "answer": "Plastic pollution"
+        },
+        {
+          "question": "Electronic waste contains…",
+          "options": [
+            { "label": "Precious metals", "image": "/icons/precious_metals.png" },
+            { "label": "Organic matter", "image": "/icons/banana_peel.png" },
+            { "label": "Soil", "image": "/icons/soil.png" }
+          ],
+          "answer": "Precious metals"
+        },
+        {
+          "question": "Smart bins use…",
+          "options": [
+            { "label": "Sensors for full detection", "image": "/icons/smart_bin.png" },
+            { "label": "Manual labor", "image": "/icons/person_reporting.png" },
+            { "label": "Water", "image": "/icons/water_drop.png" }
+          ],
+          "answer": "Sensors for full detection"
+        },
+        {
+          "question": "Circular economy aims to…",
+          "options": [
+            { "label": "Maintain resources in use", "image": "/icons/circular_economy.png" },
+            { "label": "Increase landfills", "image": "/icons/open_dump.png" },
+            { "label": "Burn waste", "image": "/icons/waste_burning.png" }
+          ],
+          "answer": "Maintain resources in use"
+        },
+        {
+          "question": "Integrated waste management includes…",
+          "options": [
+            { "label": "Collection, recycling, disposal", "image": "/icons/integrated_management.png" },
+            { "label": "Only collection", "image": "/icons/blue_bin.png" },
+            { "label": "Only burning", "image": "/icons/waste_burning.png" }
+          ],
+          "answer": "Collection, recycling, disposal"
+        }
+      ]
     }
   ]
 }
-
-
-    
-  ]
-}
-
