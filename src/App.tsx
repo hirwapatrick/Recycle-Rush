@@ -18,9 +18,11 @@ import {
   AirplaneSquare,
   VolumeCross,
   VolumeHigh,
+  Setting2,
+  Video,
 } from "iconsax-reactjs";
 
-import bgVideo from "/bg.mp4"; 
+import bgVideo from "/bg.mp4";
 import bgMusic from "/bg-music.mp3";
 
 type View = "landing" | "home" | "quiz";
@@ -31,7 +33,10 @@ export default function App() {
   const [topic, setTopic] = useState<string | null>(null);
   const [level, setLevel] = useState<number | null>(null);
   const [progress, setProgress] = useState<Progress>({});
-  const [isMuted, setIsMuted] = useState<boolean>(true); // 🎵 Mute toggle
+  const [isMuted, setIsMuted] = useState<boolean>(true);
+  const [volume, setVolume] = useState<number>(0.5);
+  const [showVideo, setShowVideo] = useState<boolean>(true);
+  const [showSettings, setShowSettings] = useState<boolean>(false);
 
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -57,12 +62,14 @@ export default function App() {
     const audio = audioRef.current;
     if (!audio) return;
 
+    audio.volume = volume;
+
     if (isMuted) {
       audio.pause();
     } else {
-      audio.play().catch(() => console.log("Autoplay blocked, user interaction needed"));
+      audio.play().catch(() => console.log("Autoplay blocked"));
     }
-  }, [isMuted, view]);
+  }, [isMuted, volume, view]);
 
   const handleStartQuiz = (selectedTopic: string, selectedLevel: number) => {
     setTopic(selectedTopic);
@@ -92,7 +99,6 @@ export default function App() {
 
   const handleRetry = () => setView("quiz");
 
-  // ✅ Animated floating icons
   const icons = [
     { icon: <Airdrop variant="Bold" size="32" color="#1F7A2E" />, x: 50, y: 50, rotate: true },
     { icon: <Aquarius variant="Bold" size="32" color="#0DAB76" />, x: 200, y: 80 },
@@ -111,13 +117,15 @@ export default function App() {
   return (
     <div className="h-screen w-screen overflow-hidden relative flex flex-col">
       {/* 🎥 Background Video */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-        src={bgVideo}
-        autoPlay
-        loop
-        muted={isMuted} // sync mute state with sound
-      />
+      {showVideo && (
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+          src={bgVideo}
+          autoPlay
+          loop
+          muted={isMuted}
+        />
+      )}
 
       {/* 🎵 Background Music */}
       <audio ref={audioRef} src={bgMusic} loop preload="auto" />
@@ -129,16 +137,12 @@ export default function App() {
         </h1>
 
         <div className="flex items-center gap-4">
-          {/* 🎵 Music Toggle */}
+          {/* ⚙️ Settings Button */}
           <button
-            onClick={() => setIsMuted((prev) => !prev)}
-            className="p-2 rounded-full bg-green-700 text-white shadow hover:bg-green-800 transition"
+            onClick={() => setShowSettings(true)}
+            className="p-2 rounded-full bg-green-600 text-white shadow hover:bg-green-700 transition"
           >
-            {isMuted ? (
-              <VolumeCross size="24" color="#fff" variant="Bold" />
-            ) : (
-              <VolumeHigh size="24" color="#fff" variant="Bold" />
-            )}
+            <Setting2 size="24" color="#fff" variant="Bold" />
           </button>
 
           {view !== "landing" && (
@@ -152,9 +156,65 @@ export default function App() {
         </div>
       </header>
 
+      {/* ✅ Settings Modal */}
+      {showSettings && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-30">
+          <div className="bg-white rounded-2xl shadow-2xl p-6 w-80 text-center relative">
+            <h2 className="text-2xl font-bold text-green-800 mb-4">Settings</h2>
+
+            {/* Music toggle */}
+            <button
+              onClick={() => setIsMuted((prev) => !prev)}
+              className="w-full flex justify-between items-center bg-green-100 px-4 py-2 rounded-lg mb-4"
+            >
+              <span className="font-medium text-green-800">Music</span>
+              {isMuted ? (
+                <VolumeCross size="24" color="#0DAB76" variant="Bold" />
+              ) : (
+                <VolumeHigh size="24" color="#0DAB76" variant="Bold" />
+              )}
+            </button>
+
+            {/* Volume control */}
+            <div className="mb-4">
+              <label className="block text-green-800 mb-1 font-medium">Volume</label>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.05"
+                value={volume}
+                onChange={(e) => setVolume(parseFloat(e.target.value))}
+                className="w-full accent-green-700"
+              />
+            </div>
+
+            {/* Video toggle */}
+            <button
+              onClick={() => setShowVideo((prev) => !prev)}
+              className="w-full flex justify-between items-center bg-green-100 px-4 py-2 rounded-lg mb-4"
+            >
+              <span className="font-medium text-green-800">Background Video</span>
+              <Video
+                size="24"
+                color={showVideo ? "#0DAB76" : "#aaa"}
+                variant="Bold"
+              />
+            </button>
+
+            {/* Close */}
+            <button
+              onClick={() => setShowSettings(false)}
+              className="mt-4 px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ✅ Main Section */}
       <main className="flex-1 flex justify-center items-center p-6 relative overflow-hidden">
-        {/* Landing Page */}
         {view === "landing" && (
           <>
             {icons.map((i, idx) => (
@@ -208,10 +268,8 @@ export default function App() {
           </>
         )}
 
-        {/* Home Page */}
         {view === "home" && <Home onStartQuiz={handleStartQuiz} progress={progress} />}
 
-        {/* Quiz Page */}
         {view === "quiz" && topic && level !== null && (
           <QuizPlayer
             topic={topic}
