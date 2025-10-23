@@ -8,12 +8,11 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+public
 dist
 dist-ssr
 *.local
 
-/bg-music.mp3
-/bg.mp4
 
 # Editor directories and files
 .vscode/*
