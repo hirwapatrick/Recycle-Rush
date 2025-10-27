@@ -480,5 +480,537 @@
         }
       ]
     }
+  ],
+  "energy_conservation": [
+    {
+      "level": "LEVEL 1 — Basic Awareness",
+      "description": "Understanding simple energy concepts.",
+      "questions": [
+        {
+          "question": "Energy helps us to do ___ in our daily lives.",
+          "options": [
+            { "label": "Nothing", "image": "/icons/nothing.png" },
+            { "label": "Work", "image": "/icons/work.png" },
+            { "label": "Sleep", "image": "/icons/sleep.png" },
+            { "label": "Eat", "image": "/icons/eat.png" }
+          ],
+          "answer": "Work"
+        },
+        {
+          "question": "Turning off lights when leaving a room helps to ___ energy.",
+          "options": [
+            { "label": "Waste", "image": "/icons/waste_energy.png" },
+            { "label": "Save", "image": "/icons/save_energy.png" },
+            { "label": "Destroy", "image": "/icons/destroy_energy.png" },
+            { "label": "Increase", "image": "/icons/increase_energy.png" }
+          ],
+          "answer": "Save"
+        },
+        {
+          "question": "The main source of energy for the Earth is the ___.",
+          "options": [
+            { "label": "Moon", "image": "/icons/moon.png" },
+            { "label": "Sun", "image": "/icons/sun.png" },
+            { "label": "Stars", "image": "/icons/stars.png" },
+            { "label": "Clouds", "image": "/icons/clouds.png" }
+          ],
+          "answer": "Sun"
+        },
+        {
+          "question": "Using sunlight instead of electric bulbs during the day helps to ___.",
+          "options": [
+            { "label": "Waste energy", "image": "/icons/waste_energy.png" },
+            { "label": "Save energy", "image": "/icons/save_energy.png" },
+            { "label": "Create heat", "image": "/icons/create_heat.png" },
+            { "label": "Increase bills", "image": "/icons/increase_bills.png" }
+          ],
+          "answer": "Save energy"
+        },
+        {
+          "question": "Unplugging phone chargers when not in use helps to ___.",
+          "options": [
+            { "label": "Waste power", "image": "/icons/waste_power.png" },
+            { "label": "Save electricity", "image": "/icons/save_electricity.png" },
+            { "label": "Add heat", "image": "/icons/add_heat.png" },
+            { "label": "Break the charger", "image": "/icons/break_charger.png" }
+          ],
+          "answer": "Save electricity"
+        },
+        {
+          "question": "Energy that comes from moving air is called ___.",
+          "options": [
+            { "label": "Solar energy", "image": "/icons/solar_energy.png" },
+            { "label": "Wind energy", "image": "/icons/wind_energy.png" },
+            { "label": "Fire energy", "image": "/icons/fire_energy.png" },
+            { "label": "Water energy", "image": "/icons/water_energy.png" }
+          ],
+          "answer": "Wind energy"
+        },
+        {
+          "question": "Leaving the television on when no one is watching is an example of ___.",
+          "options": [
+            { "label": "Energy saving", "image": "/icons/energy_saving.png" },
+            { "label": "Energy waste", "image": "/icons/energy_waste.png" },
+            { "label": "Energy production", "image": "/icons/energy_production.png" },
+            { "label": "Energy recycling", "image": "/icons/energy_recycling.png" }
+          ],
+          "answer": "Energy waste"
+        },
+        {
+          "question": "Energy conservation means ___.",
+          "options": [
+            { "label": "Using energy carefully", "image": "/icons/using_energy_carefully.png" },
+            { "label": "Using more energy", "image": "/icons/using_more_energy.png" },
+            { "label": "Avoiding sunlight", "image": "/icons/avoiding_sunlight.png" },
+            { "label": "Creating new energy", "image": "/icons/creating_new_energy.png" }
+          ],
+          "answer": "Using energy carefully"
+        },
+        {
+          "question": "Turning off the tap while brushing teeth helps to ___.",
+          "options": [
+            { "label": "Save water and energy", "image": "/icons/save_water_energy.png" },
+            { "label": "Waste energy", "image": "/icons/waste_energy.png" },
+            { "label": "Increase bills", "image": "/icons/increase_bills.png" },
+            { "label": "Use more power", "image": "/icons/use_more_power.png" }
+          ],
+          "answer": "Save water and energy"
+        },
+        {
+          "question": "The best way to dry clothes without electricity is by ___.",
+          "options": [
+            { "label": "Using sunlight", "image": "/icons/using_sunlight.png" },
+            { "label": "Using an iron", "image": "/icons/using_iron.png" },
+            { "label": "Using a dryer", "image": "/icons/using_dryer.png" },
+            { "label": "Burning fire", "image": "/icons/burning_fire.png" }
+          ],
+          "answer": "Using sunlight"
+        }
+      ]
+    },
+    {
+      "level": "LEVEL 2 — Understanding Energy Use",
+      "description": "Identifying energy types and daily usage.",
+      "questions": [
+        {
+          "question": "Devices like fans and TVs use ___ energy to work.",
+          "options": [
+            { "label": "Solar", "image": "/icons/solar.png" },
+            { "label": "Electrical", "image": "/icons/electrical.png" },
+            { "label": "Sound", "image": "/icons/sound.png" },
+            { "label": "Magnetic", "image": "/icons/magnetic.png" }
+          ],
+          "answer": "Electrical"
+        },
+        {
+          "question": "Solar panels convert sunlight into ___.",
+          "options": [
+            { "label": "Sound energy", "image": "/icons/sound_energy.png" },
+            { "label": "Electrical energy", "image": "/icons/electrical_energy.png" },
+            { "label": "Water", "image": "/icons/water.png" },
+            { "label": "Wind", "image": "/icons/wind.png" }
+          ],
+          "answer": "Electrical energy"
+        },
+        {
+          "question": "Using energy-efficient bulbs helps to ___.",
+          "options": [
+            { "label": "Use more power", "image": "/icons/use_more_power.png" },
+            { "label": "Reduce electricity use", "image": "/icons/reduce_electricity_use.png" },
+            { "label": "Waste energy", "image": "/icons/waste_energy.png" },
+            { "label": "Break lamps", "image": "/icons/break_lamps.png" }
+          ],
+          "answer": "Reduce electricity use"
+        },
+        {
+          "question": "Boiling less water in a kettle helps to ___.",
+          "options": [
+            { "label": "Save time only", "image": "/icons/save_time.png" },
+            { "label": "Save energy", "image": "/icons/save_energy.png" },
+            { "label": "Waste power", "image": "/icons/waste_power.png" },
+            { "label": "Increase heat", "image": "/icons/increase_heat.png" }
+          ],
+          "answer": "Save energy"
+        },
+        {
+          "question": "LED bulbs are better than traditional bulbs because they ___.",
+          "options": [
+            { "label": "Use less energy", "image": "/icons/use_less_energy.png" },
+            { "label": "Use more energy", "image": "/icons/use_more_energy.png" },
+            { "label": "Give less light", "image": "/icons/give_less_light.png" },
+            { "label": "Break easily", "image": "/icons/break_easily.png" }
+          ],
+          "answer": "Use less energy"
+        },
+        {
+          "question": "The act of lowering energy bills by using less energy is called ___.",
+          "options": [
+            { "label": "Energy waste", "image": "/icons/energy_waste.png" },
+            { "label": "Energy conservation", "image": "/icons/energy_conservation.png" },
+            { "label": "Energy loss", "image": "/icons/energy_loss.png" },
+            { "label": "Energy destruction", "image": "/icons/energy_destruction.png" }
+          ],
+          "answer": "Energy conservation"
+        },
+        {
+          "question": "Insulating a house helps to ___.",
+          "options": [
+            { "label": "Keep heat inside and save energy", "image": "/icons/insulation.png" },
+            { "label": "Let heat escape", "image": "/icons/heat_escape.png" },
+            { "label": "Increase noise", "image": "/icons/increase_noise.png" },
+            { "label": "Break windows", "image": "/icons/break_windows.png" }
+          ],
+          "answer": "Keep heat inside and save energy"
+        },
+        {
+          "question": "Energy-saving appliances are marked with ___ labels.",
+          "options": [
+            { "label": "Star", "image": "/icons/star_label.png" },
+            { "label": "Water", "image": "/icons/water.png" },
+            { "label": "Dust", "image": "/icons/dust.png" },
+            { "label": "Fire", "image": "/icons/fire.png" }
+          ],
+          "answer": "Star"
+        },
+        {
+          "question": "Using a bicycle instead of a car helps to ___.",
+          "options": [
+            { "label": "Pollute air", "image": "/icons/pollute_air.png" },
+            { "label": "Conserve fuel", "image": "/icons/conserve_fuel.png" },
+            { "label": "Increase noise", "image": "/icons/increase_noise.png" },
+            { "label": "Waste time", "image": "/icons/waste_time.png" }
+          ],
+          "answer": "Conserve fuel"
+        },
+        {
+          "question": "Turning off the computer when not in use helps to ___.",
+          "options": [
+            { "label": "Save electricity", "image": "/icons/save_electricity.png" },
+            { "label": "Make it hot", "image": "/icons/make_hot.png" },
+            { "label": "Waste energy", "image": "/icons/waste_energy.png" },
+            { "label": "Increase speed", "image": "/icons/increase_speed.png" }
+          ],
+          "answer": "Save electricity"
+        }
+      ]
+    },
+    {
+      "level": "LEVEL 3 — Applying Energy Knowledge",
+      "description": "Applying conservation practices in real-life scenarios.",
+      "questions": [
+        {
+          "question": "Choosing public transport over a private car helps to ___.",
+          "options": [
+            { "label": "Increase emissions", "image": "/icons/increase_emissions.png" },
+            { "label": "Save fuel", "image": "/icons/save_fuel.png" },
+            { "label": "Waste energy", "image": "/icons/waste_energy.png" },
+            { "label": "Cause pollution", "image": "/icons/pollution.png" }
+          ],
+          "answer": "Save fuel"
+        },
+        {
+          "question": "Covering pots while cooking helps to ___.",
+          "options": [
+            { "label": "Cook faster and save gas", "image": "/icons/cook_save_gas.png" },
+            { "label": "Waste gas", "image": "/icons/waste_gas.png" },
+            { "label": "Slow cooking", "image": "/icons/slow_cooking.png" },
+            { "label": "Increase smoke", "image": "/icons/increase_smoke.png" }
+          ],
+          "answer": "Cook faster and save gas"
+        },
+        {
+          "question": "Setting the refrigerator temperature correctly helps to ___.",
+          "options": [
+            { "label": "Save electricity", "image": "/icons/save_electricity.png" },
+            { "label": "Waste energy", "image": "/icons/waste_energy.png" },
+            { "label": "Melt food", "image": "/icons/melt_food.png" },
+            { "label": "Stop cooling", "image": "/icons/stop_cooling.png" }
+          ],
+          "answer": "Save electricity"
+        },
+        {
+          "question": "Buying appliances with higher star ratings means they ___.",
+          "options": [
+            { "label": "Use less energy", "image": "/icons/use_less_energy.png" },
+            { "label": "Use more energy", "image": "/icons/use_more_energy.png" },
+            { "label": "Use more water", "image": "/icons/use_more_water.png" },
+            { "label": "Break faster", "image": "/icons/break_faster.png" }
+          ],
+          "answer": "Use less energy"
+        },
+        {
+          "question": "Planting trees around buildings helps to ___.",
+          "options": [
+            { "label": "Increase heat", "image": "/icons/increase_heat.png" },
+            { "label": "Keep houses cooler and save energy", "image": "/icons/cool_houses.png" },
+            { "label": "Block air", "image": "/icons/block_air.png" },
+            { "label": "Waste space", "image": "/icons/waste_space.png" }
+          ],
+          "answer": "Keep houses cooler and save energy"
+        },
+        {
+          "question": "The energy used for heating water in a solar heater comes from ___.",
+          "options": [
+            { "label": "Electricity", "image": "/icons/electricity.png" },
+            { "label": "Firewood", "image": "/icons/firewood.png" },
+            { "label": "The sun", "image": "/icons/sun.png" },
+            { "label": "Gas", "image": "/icons/gas.png" }
+          ],
+          "answer": "The sun"
+        },
+        {
+          "question": "Washing clothes in cold water instead of hot saves ___.",
+          "options": [
+            { "label": "Water", "image": "/icons/water.png" },
+            { "label": "Energy", "image": "/icons/energy.png" },
+            { "label": "Soap", "image": "/icons/soap.png" },
+            { "label": "Time", "image": "/icons/time.png" }
+          ],
+          "answer": "Energy"
+        },
+        {
+          "question": "Cleaning air conditioner filters regularly helps to ___.",
+          "options": [
+            { "label": "Reduce energy use", "image": "/icons/reduce_energy.png" },
+            { "label": "Waste energy", "image": "/icons/waste_energy.png" },
+            { "label": "Increase bills", "image": "/icons/increase_bills.png" },
+            { "label": "Stop cooling", "image": "/icons/stop_cooling.png" }
+          ],
+          "answer": "Reduce energy use"
+        },
+        {
+          "question": "Smart meters help people to ___.",
+          "options": [
+            { "label": "Waste more electricity", "image": "/icons/waste_more.png" },
+            { "label": "Monitor and save energy use", "image": "/icons/monitor_save.png" },
+            { "label": "Stop paying bills", "image": "/icons/stop_pay.png" },
+            { "label": "Increase power", "image": "/icons/increase_power.png" }
+          ],
+          "answer": "Monitor and save energy use"
+        },
+        {
+          "question": "Using curtains at night during winter helps to ___.",
+          "options": [
+            { "label": "Keep warmth inside", "image": "/icons/keep_warmth.png" },
+            { "label": "Let heat escape", "image": "/icons/let_heat_escape.png" },
+            { "label": "Make the room cold", "image": "/icons/room_cold.png" },
+            { "label": "Increase bills", "image": "/icons/increase_bills.png" }
+          ],
+          "answer": "Keep warmth inside"
+        }
+      ]
+    },
+    {
+      "level": "LEVEL 4 — Analytical Thinking",
+      "description": "Understanding efficiency, causes of waste, and problem-solving.",
+      "questions": [
+        {
+          "question": "The largest share of energy used in homes often comes from ___.",
+          "options": [
+            { "label": "Lighting", "image": "/icons/lighting.png" },
+            { "label": "Heating and cooling", "image": "/icons/heating_cooling.png" },
+            { "label": "Ironing", "image": "/icons/ironing.png" },
+            { "label": "Computers", "image": "/icons/computers.png" }
+          ],
+          "answer": "Heating and cooling"
+        },
+        {
+          "question": "Poor insulation causes energy waste because it ___.",
+          "options": [
+            { "label": "Keeps rooms warm", "image": "/icons/keep_warm.png" },
+            { "label": "Lets heat escape", "image": "/icons/heat_escape.png" },
+            { "label": "Blocks sunlight", "image": "/icons/block_sun.png" },
+            { "label": "Saves fuel", "image": "/icons/save_fuel.png" }
+          ],
+          "answer": "Lets heat escape"
+        },
+        {
+          "question": "Leaving devices on standby still consumes energy because of ___.",
+          "options": [
+            { "label": "Phantom load", "image": "/icons/phantom_load.png" },
+            { "label": "Energy recycling", "image": "/icons/energy_recycling.png" },
+            { "label": "Cold air", "image": "/icons/cold_air.png" },
+            { "label": "Power boost", "image": "/icons/power_boost.png" }
+          ],
+          "answer": "Phantom load"
+        },
+        {
+          "question": "Switching to renewable energy helps to ___.",
+          "options": [
+            { "label": "Reduce pollution", "image": "/icons/reduce_pollution.png" },
+            { "label": "Increase carbon emissions", "image": "/icons/increase_emissions.png" },
+            { "label": "Use fossil fuels", "image": "/icons/fossil_fuels.png" },
+            { "label": "Waste sunlight", "image": "/icons/waste_sunlight.png" }
+          ],
+          "answer": "Reduce pollution"
+        },
+        {
+          "question": "Fossil fuels are non-renewable because they ___.",
+          "options": [
+            { "label": "Can’t be replaced quickly", "image": "/icons/cant_replace.png" },
+            { "label": "Are made from plants", "image": "/icons/made_plants.png" },
+            { "label": "Are clean", "image": "/icons/clean.png" },
+            { "label": "Grow on trees", "image": "/icons/grow_trees.png" }
+          ],
+          "answer": "Can’t be replaced quickly"
+        },
+        {
+          "question": "Installing motion sensors for lights is useful because it ___.",
+          "options": [
+            { "label": "Turns lights off when not needed", "image": "/icons/motion_sensor.png" },
+            { "label": "Increases usage", "image": "/icons/increase_usage.png" },
+            { "label": "Breaks bulbs", "image": "/icons/break_bulbs.png" },
+            { "label": "Wastes energy", "image": "/icons/waste_energy.png" }
+          ],
+          "answer": "Turns lights off when not needed"
+        },
+        {
+          "question": "Energy audits help organizations to ___.",
+          "options": [
+            { "label": "Track and reduce energy waste", "image": "/icons/energy_audit.png" },
+            { "label": "Increase costs", "image": "/icons/increase_costs.png" },
+            { "label": "Hide usage", "image": "/icons/hide_usage.png" },
+            { "label": "Stop production", "image": "/icons/stop_production.png" }
+          ],
+          "answer": "Track and reduce energy waste"
+        },
+        {
+          "question": "The main goal of energy conservation policies is to ___.",
+          "options": [
+            { "label": "Reduce energy waste and protect the environment", "image": "/icons/protect_environment.png" },
+            { "label": "Encourage waste", "image": "/icons/encourage_waste.png" },
+            { "label": "Increase fuel prices", "image": "/icons/increase_fuel.png" },
+            { "label": "Stop innovation", "image": "/icons/stop_innovation.png" }
+          ],
+          "answer": "Reduce energy waste and protect the environment"
+        },
+        {
+          "question": "The use of compact fluorescent lamps (CFLs) saves energy by ___.",
+          "options": [
+            { "label": "Producing more light per watt", "image": "/icons/cfl.png" },
+            { "label": "Releasing more heat", "image": "/icons/release_heat.png" },
+            { "label": "Wasting current", "image": "/icons/waste_current.png" },
+            { "label": "Using extra wires", "image": "/icons/extra_wires.png" }
+          ],
+          "answer": "Producing more light per watt"
+        },
+        {
+          "question": "The 'carbon footprint' of a person measures ___.",
+          "options": [
+            { "label": "Amount of CO₂ produced", "image": "/icons/co2.png" },
+            { "label": "Number of shoes used", "image": "/icons/shoes.png" },
+            { "label": "Energy bills", "image": "/icons/bills.png" },
+            { "label": "Energy labels", "image": "/icons/labels.png" }
+          ],
+          "answer": "Amount of CO₂ produced"
+        }
+      ]
+    },
+    {
+      "level": "LEVEL 5 — Expert & Real-World Problem Solving",
+      "description": "Innovation, evaluation, and sustainability.",
+      "questions": [
+        {
+          "question": "The best long-term way to reduce energy use in a city is by ___.",
+          "options": [
+            { "label": "Promoting renewable energy", "image": "/icons/renewable_energy.png" },
+            { "label": "Building more cars", "image": "/icons/build_cars.png" },
+            { "label": "Burning more fuel", "image": "/icons/burning_fuel.png" },
+            { "label": "Using more lights", "image": "/icons/more_lights.png" }
+          ],
+          "answer": "Promoting renewable energy"
+        },
+        {
+          "question": "Smart grids improve energy conservation by ___.",
+          "options": [
+            { "label": "Balancing supply and demand efficiently", "image": "/icons/smart_grid.png" },
+            { "label": "Wasting power", "image": "/icons/waste_power.png" },
+            { "label": "Increasing bills", "image": "/icons/increase_bills.png" },
+            { "label": "Reducing data", "image": "/icons/reduce_data.png" }
+          ],
+          "answer": "Balancing supply and demand efficiently"
+        },
+        {
+          "question": "Governments encourage energy-saving behavior by ___.",
+          "options": [
+            { "label": "Giving tax incentives for renewable energy", "image": "/icons/tax_incentives.png" },
+            { "label": "Banning solar power", "image": "/icons/ban_solar.png" },
+            { "label": "Building coal plants", "image": "/icons/coal_plants.png" },
+            { "label": "Encouraging waste", "image": "/icons/encourage_waste.png" }
+          ],
+          "answer": "Giving tax incentives for renewable energy"
+        },
+        {
+          "question": "Zero-energy buildings are designed to ___.",
+          "options": [
+            { "label": "Produce as much energy as they consume", "image": "/icons/zero_energy.png" },
+            { "label": "Use only gas", "image": "/icons/use_gas.png" },
+            { "label": "Depend on diesel", "image": "/icons/diesel.png" },
+            { "label": "Avoid sunlight", "image": "/icons/avoid_sun.png" }
+          ],
+          "answer": "Produce as much energy as they consume"
+        },
+        {
+          "question": "Using electric vehicles instead of petrol cars helps to ___.",
+          "options": [
+            { "label": "Reduce air pollution", "image": "/icons/electric_vehicles.png" },
+            { "label": "Increase noise", "image": "/icons/increase_noise.png" },
+            { "label": "Waste electricity", "image": "/icons/waste_electricity.png" },
+            { "label": "Create smoke", "image": "/icons/create_smoke.png" }
+          ],
+          "answer": "Reduce air pollution"
+        },
+        {
+          "question": "A city switching to LED streetlights can expect to ___.",
+          "options": [
+            { "label": "Save energy and reduce maintenance costs", "image": "/icons/led_streetlights.png" },
+            { "label": "Waste more power", "image": "/icons/waste_power.png" },
+            { "label": "Increase emissions", "image": "/icons/increase_emissions.png" },
+            { "label": "Lose brightness", "image": "/icons/lose_brightness.png" }
+          ],
+          "answer": "Save energy and reduce maintenance costs"
+        },
+        {
+          "question": "Using smart thermostats in homes allows ___.",
+          "options": [
+            { "label": "Automatic energy control based on temperature", "image": "/icons/smart_thermostat.png" },
+            { "label": "Manual waste", "image": "/icons/manual_waste.png" },
+            { "label": "Constant heating", "image": "/icons/constant_heating.png" },
+            { "label": "Energy loss", "image": "/icons/energy_loss.png" }
+          ],
+          "answer": "Automatic energy control based on temperature"
+        },
+        {
+          "question": "Recycling waste materials helps in saving energy by ___.",
+          "options": [
+            { "label": "Reducing the need to produce new materials", "image": "/icons/recycle.png" },
+            { "label": "Increasing production", "image": "/icons/increase_production.png" },
+            { "label": "Using more resources", "image": "/icons/more_resources.png" },
+            { "label": "Making waste", "image": "/icons/make_waste.png" }
+          ],
+          "answer": "Reducing the need to produce new materials"
+        },
+        {
+          "question": "Community awareness programs about energy conservation help to ___.",
+          "options": [
+            { "label": "Change behavior toward sustainable energy use", "image": "/icons/community_awareness.png" },
+            { "label": "Waste funds", "image": "/icons/waste_funds.png" },
+            { "label": "Stop technology", "image": "/icons/stop_tech.png" },
+            { "label": "Reduce education", "image": "/icons/reduce_education.png" }
+          ],
+          "answer": "Change behavior toward sustainable energy use"
+        },
+        {
+          "question": "The global goal of energy conservation is to ___.",
+          "options": [
+            { "label": "Ensure sustainable development for future generations", "image": "/icons/sustainable_future.png" },
+            { "label": "Increase pollution", "image": "/icons/increase_pollution.png" },
+            { "label": "Waste resources", "image": "/icons/waste_resources.png" },
+            { "label": "Limit growth", "image": "/icons/limit_growth.png" }
+          ],
+          "answer": "Ensure sustainable development for future generations"
+        }
+      ]
+    }
   ]
 }
